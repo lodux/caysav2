@@ -1,0 +1,26 @@
+.navbarcontainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.logoImg {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.navoption {
+    margin-right: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.search {
+    margin-left: 50px;
+    margin-right: 10px;
+}
