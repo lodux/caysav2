@@ -1,0 +1,24 @@
+.footcont {
+    width: 100%;
+    height: 180px;
+    background-color: black;
+    display: flex;
+}
+
+.cay {
+    color: #2cbade;
+}
+
+.scritta {
+    color: white;
+}
+
+.psinistra {
+    margin-left: 8%;
+    width: 42%;
+}
+
+.pdestra{
+    margin-left: 8%;
+    width: 42%;
+}

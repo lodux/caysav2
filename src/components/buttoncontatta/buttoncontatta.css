@@ -1,0 +1,31 @@
+
+
+.buttonContatta{
+    width: 200px;
+    height: 45px;
+    background-color: rgb(60, 207, 236);
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    text-decoration: underline;
+    border: none;
+    font-size: larger;
+    margin-top: 94%;
+    margin-left: 60%;
+}
+
+.logomess {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color:rgb(60, 207, 236);
+    border-radius: 20px;
+    margin-top: 82%;
+    margin-left: 75%;
+
+}
+
+.imgmess{
+    width: 40px
+
+}
