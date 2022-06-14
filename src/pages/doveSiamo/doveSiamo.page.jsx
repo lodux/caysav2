@@ -1,16 +1,16 @@
-import { render } from '@testing-library/react';
-import React, { useEffect, useState } from 'react'
-import MapPage from '../MapPage/MapPage';
-import './dovesiamo.css';
+import { useState, Fragment } from 'react'
+import MapPage from '../map/map.page'
+
+import './dovesiamo.styles.scss';
 
 
 
 
-export default function Dovesiamopage() {
-  const [citta, setCitta]=useState(null);
+const DovesiamoPage = () => {
+  const [citta, setCitta] = useState(null)
 
   return (
-      <>
+      <Fragment>
       { citta ? (
           <MapPage via={citta}/> 
       ) : (
@@ -89,8 +89,10 @@ export default function Dovesiamopage() {
 
       }
     
-      </>
+      </Fragment>
 
   )
 
 }
+
+export default DovesiamoPage

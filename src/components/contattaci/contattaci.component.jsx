@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import './contattaci.css'
+import { useState } from 'react'
+import './contattaci.styles.scss'
 
 
 
 //funzione fatti chiamare da un nostro operatore
-const Fattichiamare=()=>{
+const Fattichiamare = () => {
   return (
     <div className="containerfattichiamare">
       <span className="frase">
@@ -29,7 +29,7 @@ const Fattichiamare=()=>{
 }
 
 //scelta tra fatti chiamare o chiama
-const Scelta=()=>{
+const Scelta = () => {
   const [fatti, setFattichiamare]=useState(false);
   return(
     <>
@@ -67,7 +67,7 @@ const Scelta=()=>{
 }
 
 
-export default function Contattaci() {
+const Contattaci = () => {
 const [chiama, setChiama]=useState(false);
   return (
     <div className='supportoContainer'>
@@ -130,3 +130,4 @@ const [chiama, setChiama]=useState(false);
   )
   }
    
+export default Contattaci
