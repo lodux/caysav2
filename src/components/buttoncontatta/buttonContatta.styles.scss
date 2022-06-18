@@ -1,0 +1,34 @@
+$colore-tosto: rgb(60, 207, 236);
+
+.button-contattaci {
+    position: fixed;
+    text-decoration: underline;
+    bottom: 0;
+    left: 70%;
+    font-size: 40px;
+    width: 400px;
+    height: 80px;
+    background-color:$colore-tosto;
+    border: none;
+    color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .icona-messaggio {
+        width: 60px;
+        position: absolute;
+        display: inline-block;
+        top: -40px;
+        right: -35px;
+        background-color: $colore-tosto;
+        border-radius: 50%;
+        padding: 10px;
+
+        img {
+            width: 70%;
+            height: auto;
+        }
+    }
+}
