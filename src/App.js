@@ -27,7 +27,7 @@ function App() {
         <Route path="/chisiamo" element={ <Chisiamopage/> } />
         <Route path="/supporto" element={ <Supportopage/> } />
         <Route path="/contattaci" element={ <Contattacipage/> } />
-        <Route path="/mappage" element={ <MapPage/> } />
+        <Route path="/mappage/:via" element={ <MapPage/> } />
       </Routes>
     </div>
 
