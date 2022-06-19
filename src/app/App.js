@@ -2,20 +2,19 @@ import { Routes, Route, useLocation } from "react-router-dom"
 import { Suspense, lazy } from "react"
 import Navbar from "../components/Navbar/navBar.component";
 import DovesiamoPage from "../pages/Dovesiamo/doveSiamo.page";
-import ChisiamoPage from "../pages/chisiamo/chiSiamo.page";
 import MapPage from "../pages/MapPage/MapPage";
 import './App.scss';
 
 import ButtonContatta from "../components/buttoncontatta/buttonContatta.component";
 
 //import con lazy per migliorare la performance
-/* const LuceEGasPage = lazy(() => import('../pages/servizi/luce-e-gas/luce-e-gas.page')) */
+const LuceEGasPage = lazy(() => import('../pages/Servizi/luce-e-gas/luce-e-gas.page')) 
 const ContattaciPage = lazy(() => import('../pages/conttattaci/contattaci.page'))
 /* const DoveSiamoPage = lazy(() => import('../pages/doveSiamo/doveSiamo.page')) */
 /* const NavBar = lazy(() => import('../components/navBar/navBar.component')) */
 const SupportoPage = lazy(() => import('../pages/supporto/supporto.page'))
-/* const ChisiamoPage = lazy(() => import('../pages/chiSiamo/chiSiamo.page'))
-const ServiziPage = lazy(() => import('../pages/servizi/servizi.page')) */
+const ChisiamoPage = lazy(() => import('../pages/chisiamo/chiSiamo.page'))
+const ServiziPage = lazy(() => import('../pages/Servizi/servizi.page')) 
 const ImpresePage = lazy(() => import('../pages/imprese/imprese.page'))
 const HomePage = lazy(() => import('../pages/home/home.page'))
 
@@ -30,8 +29,8 @@ const App = () => {
       <Suspense fallback={<span>Loading...</span>}>
         <Routes>
           <Route path='/' element = { <HomePage/> }/>
-          {/* <Route path='servizi' element = { <ServiziPage/> } />
-          <Route path='servizi/luce-e-gas' element = { <LuceEGasPage/> }/> */}
+           <Route path='servizi' element = { <ServiziPage/> } />
+          <Route path='servizi/luce-e-gas' element = { <LuceEGasPage/> }/> 
           <Route path='servizi/fotovoltaico' element = { <h1>Fotovoltaico</h1>}/>
           <Route path="imprese" element = { <ImpresePage/> }/>
           <Route path="dovesiamo" element = { <DovesiamoPage/> }/>
