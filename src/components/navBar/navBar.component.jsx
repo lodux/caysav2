@@ -3,16 +3,10 @@ import { Link } from 'react-router-dom'
 
 import './navBar.styles.scss'
 
-import lente from './search.svg'
 import menu from './menu.svg'
 const LOGO_LINK = 'https://www.caymangroup.it/wp-content/uploads/2021/03/logo_caygroup_trasp.png'
 
 //evitiamo le ripetizioni di codice il più possibile
-const NavBarOption = ({ nome, link }) => (
-    <Link to={link} style={{textDecoration: 'none'}}>
-        <span className="navoption">{nome}</span>
-    </Link> 
-)
 
 const elementiNavBar = [
     {
@@ -42,9 +36,14 @@ const elementiNavBar = [
 ];
 
 const Navbar = ({ linkAttuale }) => {
-    const [isClicked, setClick] = useState(false);
+    const [isClicked, setClick] = useState(false)
+    const [isMenuIconClicked, setIsMenuIconClicked] = useState(false)
+
     return (
-        <div className='navbar-container'>
+        <div className={`
+            navbar-container
+            ${isMenuIconClicked ? 'vertical' : null}
+        `}>
             <div className="logo">
                 <Link to=''>
                     <img className="logoImg" alt='cayman-logo' src={LOGO_LINK} />
@@ -61,8 +60,7 @@ const Navbar = ({ linkAttuale }) => {
                         <span 
                         className={`
                             elemento
-                            ${ linkAttuale === el.link ? 'selezionato ' : null }
-                            ${ !isClicked ? 'nascosto' : null }                            
+                            ${ linkAttuale === el.link ? 'selezionato ' : null }                       
                         `}
                         // 'elemento' è la className che hanno tutti i componenti di default. 
                         //Cliccandolo, otterrà anche la className 'selezionato'. 
@@ -78,17 +76,11 @@ const Navbar = ({ linkAttuale }) => {
             }
 
             <img 
-                src={lente} 
-                alt="cerca" 
-                className="search"
-            /> {/* width e height li ho messi nei css*/}
-
-            <img 
                 src={menu}
                 alt='menu-ico'
                 className='menu-ico'
                 onClick={
-                    () => setClick(prevState => !prevState)//switch tra true e false
+                    () => setIsMenuIconClicked(prevState => !prevState)//switch tra true e false
                 }
             />
         </div>
