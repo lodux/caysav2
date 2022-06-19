@@ -1,0 +1,52 @@
+$colore-tosto: #2FA7CF;
+$colore-sfondo: #2596be;
+
+.navbar-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba($color: $colore-sfondo, $alpha: 0.2);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
+    .logo {
+        padding-top: 10px;
+
+        .logoImg {
+            width: 140px;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+    
+    .elemento {
+        font-family: sans-serif;
+        color: #ffff;
+        font-size: 25px;
+        font-weight: 600;
+
+         &:hover {
+            cursor: pointer;
+            color: $colore-tosto;
+        }
+
+        &.selezionato {
+            color: $colore-tosto;
+        }
+    }   
+
+    .search {
+        width: 50px;
+        height: auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .menu-ico {
+        display: none;
+        position: absolute;
+    }
+}

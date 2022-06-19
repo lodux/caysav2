@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/pages/Dovesiamo/Dovesiamopage.jsx
 import { render } from '@testing-library/react';
 import React, { useEffect, useState } from 'react'
 import MapPage from '../MapPage/MapPage';
@@ -5,14 +6,31 @@ import {Link} from 'react-router-dom';
 
 
 import './dovesiamo.css';
+=======
+import { useState, Fragment } from 'react'
+import MapPage from '../map/map.page'
+>>>>>>> cb76941a85e69a2204aa1c402ad0de87327f87e6:src/pages/doveSiamo/doveSiamo.page.jsx
+
+import './dovesiamo.styles.scss';
 
 
 
-
+<<<<<<< HEAD:src/pages/Dovesiamo/Dovesiamopage.jsx
 export default function Dovesiamopage() {
 
   return (
       <>
+=======
+
+const DovesiamoPage = () => {
+  const [citta, setCitta] = useState(null)
+
+  return (
+      <Fragment>
+      { citta ? (
+          <MapPage via={citta}/> 
+      ) : (
+>>>>>>> cb76941a85e69a2204aa1c402ad0de87327f87e6:src/pages/doveSiamo/doveSiamo.page.jsx
          <div className="dovesiamocontainer">
          <div> 
               <span className='spansede'>vieni a trovarci</span>
@@ -108,8 +126,10 @@ export default function Dovesiamopage() {
          height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
       </div>  
     
-      </>
+      </Fragment>
 
   )
 
 }
+
+export default DovesiamoPage

@@ -1,7 +1,6 @@
-import React from 'react'
-import './footer.css'
+import './footer.styles.scss'
 
-export default function Footer() {
+const Footer = () => {
   return (
     <div className='footcont'>
         <div className="psinistra">
@@ -22,3 +21,5 @@ export default function Footer() {
     </div>
   )
 }
+
+export default Footer
