@@ -1,55 +1,185 @@
 .supportoContainer{  
-   display: flex;
-   flex-direction: column;
-   width: 350px;
-   height: 450px;
-   border: 1px solid black;
-}
-
-/* logo telefono */
-.fa{
-    color:#2cbade;
     display: flex;
-    justify-content: flex-start;
-    padding-right: 25px;
-}
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+ }
+ 
+ /* logo telefono */
+ .fa{
+     color:#2cbade;
+     display: flex;
+     justify-content: flex-start;
+     padding-right: 25px;
+ }
+ 
+ 
+ .option1 {
+     width: 280px;
+     height: 70px;
+     border-left: solid 4px #2cbade;
+     margin-bottom: 20px;
+     padding: 20px 15px 10px 20px;
+     cursor: pointer;
+     box-shadow: 0 5px 15px #0000001a;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+ }
 
-
-.option1 {
+ .option2scelta {
     width: 280px;
     height: 70px;
-    border-left: solid 4px #2cbade;
-    margin-bottom: 20px;
+    border-left: solid 4px #2E5C00;
+    margin-bottom: 15px;
     padding: 20px 15px 10px 20px;
     cursor: pointer;
     box-shadow: 0 5px 15px #0000001a;
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
-
-/* raccoglie telefono e numero verde */
-.ps{
-    display: flex;
-
-}
-
-.nverde {
- background-color:#2cbade;
- border-radius: 8px;
- font-weight: bold;
- margin-top: 0;
- height: 29px;
- padding-left: 5px;
- padding-right: 5px;
- display: flex;
- align-items: center;
+ 
+ /* raccoglie telefono e numero verde */
+ .ps{
+     display: flex;
+ 
+ }
+ 
+ .nverde {
+  background-color:#2cbade;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 0;
+  height: 29px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+ 
+  
+ }
+ 
+ .chat {
+     background-color:rgb(0,255,0);
+     border-radius: 8px;
+     width: 280px;
+     font-weight: bold;
+     margin-top: 0;
+     height: 29px;
+     padding-left: 8px;
+     padding-right: 8px;
+     display: flex;
+     align-items: center;
+    
+     
+    }
+ 
+ .option2 {
+     width: 280px;
+     height: 70px;
+     border-left: solid 4px rgb(0,255,0);
+     margin-bottom: 15px;
+     padding: 20px 15px 10px 20px;
+     cursor: pointer;
+     box-shadow: 0 5px 15px #0000001a;
+     text-align: center;
+ }
+ 
+ .scelta {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ 
+ .number {
+     color: black;
+     text-decoration: none;
+ }
+ 
+ .number:hover {
+     text-decoration: underline;
+ }
+ 
 
  
-}
 
-.chat {
-    background-color:rgb(0,255,0);
+ 
+ .partealta {
+     width: 100%;
+     display: flex;
+     border-bottom: rgb(170, 169, 169) 1px solid;
+     height: 50px;
+ 
+     
+ }
+ 
+ .sc {
+     width: 60%;
+     color: #2cbade;
+     display: flex;
+     margin-left: 8px;
+     margin-top: 4px;
+     align-items: center;
+     justify-content: center;
+     height: 40px;
+     background-color: rgba(44, 186, 222, 0.14);
+     
+ }
+ 
+ .collegamento {
+     text-decoration: none;
+     color: black;
+ }
+
+
+ 
+ .meno {
+     width: 20px;
+     height: 4px;
+     margin-left: 80px;
+     margin-top: 20px;
+     background-color: #2cbade;
+    cursor: pointer;
+ }
+ 
+ .scegliscritta {
+     color: #2cbade;
+ }
+ 
+ .pi {
+     display: flex;
+     margin-left: 50px;
+     justify-content: space-between;
+ }
+
+
+ 
+ .fa-angle-right {
+    margin-left: 50px;
+    font-weight: bold;
+ }
+ 
+ .avviachat {
+     width: 180px;
+ }
+ 
+ .avviachat:hover{
+     text-decoration: underline;
+ }
+ 
+ .footer {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 10px;
+     font-size:large;
+     color: rgb(117, 117, 117);
+ }
+
+ .fattichiamare {
+    background-color:#2E5C00;
+    color: white;
     border-radius: 8px;
     width: 280px;
     font-weight: bold;
@@ -59,131 +189,71 @@
     padding-right: 8px;
     display: flex;
     align-items: center;
-   
-    
-   }
+ }
 
-.option2 {
-    width: 280px;
-    height: 70px;
-    border-left: solid 4px rgb(0,255,0);
-    margin-bottom: 15px;
-    padding: 20px 15px 10px 20px;
+ /* sezione fatti chiamare */ 
+
+ .containerfattichiamare {
+     display: flex;
+     flex-direction: column;
+     margin-left: 10px;
+ 
+ } 
+ 
+ .inp {
+     transition: all .1s linear;
+     font-family: RoobertLight,Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+     font-weight: 300;
+     font-style: normal;
+     font-size: 15px;
+     letter-spacing: 0;
+     line-height: 1;
+     background: 0;
+     border: 2px solid rgba(0,0,0,.15);
+     color: #000;
+     display: inline-block;
+     margin-top: 17px;
+     min-width: 160px;
+     outline: 0;
+     padding: 9px 9px 7px;
+     width: 90%;
+     -moz-appearance: textfield;
+     -webkit-appearance: none;
+     border-radius: 0;
+     box-shadow: none;
+ }
+
+ .inputchiama {
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .bottonefattichiamare {
+        font-family: RoobertBold,Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 17px;
+        letter-spacing: .6px;
+        line-height: 1.33333;
+        text-transform: uppercase;
+        margin-right: 0;
+ }
+
+ .tastofatti {
+    display: flex;
     cursor: pointer;
-    box-shadow: 0 5px 15px #0000001a;
-    text-align: center;
-}
-
-.scelta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.number {
-    color: black;
-    text-decoration: none;
-}
-
-.number:hover {
-    text-decoration: underline;
-}
-
-.inp {
-    transition: all .1s linear;
-    font-family: RoobertLight,Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 15px;
-    letter-spacing: 0;
-    line-height: 1;
-    background: 0;
-    border: 2px solid rgba(0,0,0,.15);
-    color: #000;
-    display: inline-block;
-    margin-top: 50px;
-    min-width: 160px;
-    outline: 0;
-    padding: 10px 10px 8px;
-    width: 40%;
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.containerfattichiamare {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.partealta {
-    width: 100%;
-    display: flex;
-    border-bottom: rgb(170, 169, 169) 1px solid;
-    height: 50px;
-
     
-}
+ }
 
-.sc {
-    width: 60%;
-    color: #2cbade;
-    display: flex;
-    margin-left: 8px;
-    margin-top: 4px;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    background-color: rgba(44, 186, 222, 0.14);
-    
-}
+ .linea {
+    margin-top:3px;
+    width: 95%;
+    height: 1px;
+    background-color: grey;
+ }
 
-.collegamento {
-    text-decoration: none;
-    color: black;
-}
-
-.meno {
-    width: 20px;
-    height: 4px;
-    margin-left: 80px;
-    margin-top: 20px;
-    background-color: #2cbade;
-   cursor: pointer;
-}
-
-.scegliscritta {
-    color: #2cbade;
-}
-
-.pi {
-    display: flex;
-    margin-left: 50px;
-    justify-content: space-between;
-}
-
-.fa-angle-right {
-   margin-left: 50px;
-   font-weight: bold;
-}
-
-.avviachat {
-    width: 180px;
-}
-
-.avviachat:hover{
-    text-decoration: underline;
-}
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 16px;
-    font-size:large;
-    color: rgb(117, 117, 117);
-}
+ .normativa {
+    font-size: 13px;
+   
+ }
