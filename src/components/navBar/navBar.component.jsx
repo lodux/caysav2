@@ -35,8 +35,7 @@ const elementiNavBar = [
     }
 ];
 
-const Navbar = ({ linkAttuale }) => {
-    const [isClicked, setClick] = useState(false)
+const NavBar = ({ linkAttuale }) => {
     const [isMenuIconClicked, setIsMenuIconClicked] = useState(false)
 
     return (
@@ -49,7 +48,6 @@ const Navbar = ({ linkAttuale }) => {
                     <img className="logoImg" alt='cayman-logo' src={LOGO_LINK} />
                 </Link>
             </div>
-
             {
                 elementiNavBar.map((el, i) => (
                     <Link 
@@ -64,17 +62,12 @@ const Navbar = ({ linkAttuale }) => {
                         `}
                         // 'elemento' è la className che hanno tutti i componenti di default. 
                         //Cliccandolo, otterrà anche la className 'selezionato'. 
-                        //'nascosto' è aggiunto di default da mobile
-                        onClick={
-                            () => setClick(false)//in questo modo, da mobile, la navbar si richiude dopo averla cliccata 
-                        }
                         >
                             {el.nome}
                         </span>
                     </Link>                     
                 ))
             }
-
             <img 
                 src={menu}
                 alt='menu-ico'
@@ -83,8 +76,14 @@ const Navbar = ({ linkAttuale }) => {
                     () => setIsMenuIconClicked(prevState => !prevState)//switch tra true e false
                 }
             />
+            <span 
+                className='x' 
+                onClick={
+                    () => setIsMenuIconClicked(false)
+                }
+            />
         </div>
     )
 }
 
-export default Navbar
+export default NavBar
