@@ -212,3 +212,12 @@ const LuceEGasPage = () => {
 }
 
 export default LuceEGasPage
+
+
+
+/*
+Enel X foto da 1.9 a 6
+climatizzatore longbonus lg libero smart
+caldaia 1543
+luce e gas, imprese polize foto clima caldaie
+*/
