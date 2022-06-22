@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react';
 import React, { useEffect, useState } from 'react'
-import MapPage from '../MapPage/MapPage';
 import {Link} from 'react-router-dom';
 
 
@@ -15,32 +14,32 @@ export default function  DovesiamoPage() {
   return (
       <>
          <div className="dovesiamocontainer">
-         <div> 
-              <span className='spansede'>vieni a trovarci</span>
-              <h1 className="sedi">Le nostre sedi:</h1>
+         <div className='scrittasup'> 
+              <h1 className='spansede'>VIENI A TROVARCI</h1>
+              <h2 className="sedi">LE NOSTRE SEDI: </h2>
          </div>
          <div className="cittaContainer">
            <div className='city'>
 
               <h4 className='cityname'>Palermo</h4>
               <Link className="link" to='/mappage/ven'>
-                <span className='adress' >via emanuele notabartolo 9/D 
-               <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                <span className='adress' >Via Emanuele Notabartolo 9/D 
+                <i className='fa fa-arrow-right' /> 
                </span>
               </Link>
               <Link className="link" to='/mappage/vbr'>
-               <span className='adress' >via buonriposo 81
-               <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+               <span className='adress' >Via Buonriposo 81
+                <i className='fa fa-arrow-right' /> 
                </span>
                </Link>
                <Link className="link" to="/mappage/vfp">
-                   <span className='adress'>via filippo pecoraino (CC FORUM)
-                    <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                   <span className='adress'>Via Filippo Pecoraino (CC FORUM)
+                     <i className='fa fa-arrow-right' /> 
                     </span>
                </Link>
               <Link className="link" to="/mappage/vsc">
-               <span className='adress'>via sferra cavallo 122
-               <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+               <span className='adress'>Via Sferra Cavallo 122
+                <i className='fa fa-arrow-right' /> 
                </span>
               </Link>     
            </div>
@@ -48,8 +47,8 @@ export default function  DovesiamoPage() {
               <h4 className='cityname'>Carini</h4>
               <Link className="link" to="/mappage/ci">
                  <span className='adress'>
-                Corso italia 37
-                <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                Corso Italia 37
+                 <i className='fa fa-arrow-right' /> 
                 </span>
               </Link>
            </div>
@@ -57,18 +56,19 @@ export default function  DovesiamoPage() {
               <h4 className='cityname'>Balestrate</h4>
               <Link className="link" to="/mappage/vmdp">
                 <span className='adress'>
-               Via madonna del ponte 38
-                <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+               Via Madonna Del Ponte 38
+                 <i className='fa fa-arrow-right' /> 
                 </span>
               </Link>
               
            </div>
+
            <div className='city'>
               <h4 className='cityname'>Salemi</h4>
               <Link className="link" to="/mappage/valp">
                     <span className='adress'>
-                Via antonino Lo Presti 241
-                <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                Via Antonino Lo Presti 241
+                 <i className='fa fa-arrow-right' /> 
                 </span>
               </Link>
           
@@ -77,8 +77,8 @@ export default function  DovesiamoPage() {
               <h4 className='cityname'>Marsala-Strasatti</h4>
               <Link className="link" to="/mappage/vn">
                  <span className='adress'>
-                Via nazionale 647
-                <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                Via Nazionale 647
+                 <i className='fa fa-arrow-right' /> 
                 </span>
               </Link>
              
@@ -87,8 +87,8 @@ export default function  DovesiamoPage() {
               <h4 className='cityname'>Ribera</h4>
               <Link className="link" to="/mappage/cu">
                     <span className='adress'>
-                corso umberto 57
-                <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                Corso Umberto 57
+                <i className='fa fa-arrow-right' /> 
                 </span>
               </Link>
           
@@ -97,8 +97,8 @@ export default function  DovesiamoPage() {
               <h4 className='cityname'>Alcamo</h4>
               <Link className="link" to="/mappage/vmdr">
                   <span className='adress'>
-                Via madonna del riposo 73
-                <img className='arrow' src="https://www.enel.it/spazio-enel/theme/images/freccia_risultati.png" alt="" /> 
+                Via Madonna Del Riposo 73
+                 <i className='fa fa-arrow-right' /> 
                 </span>
               </Link>
            </div>

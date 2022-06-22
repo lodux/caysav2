@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer/footer.component'
 
 import './servizi.styles.scss'
 
@@ -60,6 +61,7 @@ const ServiziPage = () => {
           </div>
         ))
       }
+  
     </div>
   )
 }

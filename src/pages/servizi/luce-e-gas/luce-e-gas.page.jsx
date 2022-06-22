@@ -12,6 +12,8 @@ const LuceEGasPage = () => {
                 calculateScrollDistance()
             })
         })
+
+        console.log(document.documentElement)
     }
      
     const getDocHeight = () => Math.max(
@@ -21,9 +23,9 @@ const LuceEGasPage = () => {
     )
 
     const calculateScrollDistance = () => {
-        const scrollTop = window.pageYOffset
-        const windowHeight = window.innerHeight
-        const docHeight = getDocHeight()
+        const scrollTop = window.pageYOffset 
+        const windowHeight = window.innerHeight //altezza della pagina
+        const docHeight = 1340 //altezza del componente "servizio"
 
         const totalDocScrollLength = docHeight - windowHeight; 
         
@@ -210,3 +212,12 @@ const LuceEGasPage = () => {
 }
 
 export default LuceEGasPage
+
+
+
+/*
+Enel X foto da 1.9 a 6
+climatizzatore longbonus lg libero smart
+caldaia 1543
+luce e gas, imprese polize foto clima caldaie
+*/

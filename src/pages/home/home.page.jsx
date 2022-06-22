@@ -10,13 +10,11 @@ const galleriaDiImmagini = [
     'https://cdn.gobankingrates.com/wp-content/uploads/2019/05/Davao-City-in-the-Phillippines-shutterstock_504042466.jpg'
 ]
 
-const delay = 4000
+const delay = 6000
 
 const HomePage = () => {
-    const [sfondo, setSfondo] = useState(galleriaDiImmagini[0])
     const [index, setIndex] = useState(0)
     const timeoutRef = useRef(null)
-    const [movimento, setMovimento] = useState(true)
 
     const resetTimeout = () => timeoutRef.current ? clearTimeout(timeoutRef.current) : null
 
@@ -33,7 +31,7 @@ const HomePage = () => {
         return () => {
             resetTimeout()
         }
-    }, [index, movimento]) 
+    }, [index]) 
 
     return (
         <div className='homepage'> 

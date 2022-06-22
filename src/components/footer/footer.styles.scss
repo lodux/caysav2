@@ -1,24 +1,82 @@
-.footcont {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+.footcont{
+    margin-top: 50px;
     width: 100%;
-    height: 180px;
-    background-color: black;
+    height: 290px;
+    background-color: black ;
     display: flex;
-}
+    align-items: center;
+    display: flex;
+	flex-wrap: wrap;
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+    @media only screen and (max-width: 1100px) {
+        height: auto;
+    
 
-.cay {
-    color: #2cbade;
+        }
 }
-
-.scritta {
+ul{
+    list-style: none;
+}
+.colcont{
+    display: flex;
+    margin-left: 4%;
     color: white;
 }
 
-.psinistra {
-    margin-left: 8%;
-    width: 42%;
+.col {
+    margin-right: 10%;
+    width: 33%;
+    padding: 0 5px;
+    @media only screen and (max-width: 1200px) {
+        width: auto;  
+        }
 }
 
-.pdestra{
-    margin-left: 8%;
-    width: 42%;
+.col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:#2cbade;
+    height: 2px;
+    box-sizing: border-box;
+    width: 52px;
+}
+
+.spancol{
+    color: #bbbbbb;
+}
+
+.social{
+    color: white;
+}
+
+.col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.col .social-links a:hover{
+	color: white;
+	background-color: #2cbade;
 }
