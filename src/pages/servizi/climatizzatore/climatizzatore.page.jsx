@@ -64,7 +64,10 @@ const Climatizzatore = () => {
                 <div className='wrapper'>
                 {
                     prodotti.map(({ imgLink, desc, prezzo, sottotitolo, titolo }, i) => (
-                        <div className='prodotto'>
+                        <div 
+                            key={i}
+                            className='prodotto'
+                        >
                             <div className='immagine-wrapper'>
                                 <img 
                                     src={imgLink}
