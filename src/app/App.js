@@ -6,15 +6,17 @@ import ButtonContatta from "../components/buttoncontatta/buttonContatta.componen
 import NavBar from "../components/navBar/navBar.component";
 
 //import con lazy per migliorare la performance
+const ClimatizzatorePage = lazy(() => import('../pages/servizi/climatizzatore/climatizzatore.page')) 
 const LuceEGasPage = lazy(() => import('../pages/servizi/luce-e-gas/luce-e-gas.page')) 
-const ContattaciPage = lazy(() => import('../pages/conttattaci/contattaci.page'))
-const DoveSiamoPage = lazy(() => import('../pages/doveSiamo/doveSiamo.page'))
+const ContattaciPage = lazy(() => import('../pages/contattaci/contattaci.page'))
+const DoveSiamoPage = lazy(() => import('../pages/doveSiamo/doveSiamo.page')) 
 const SupportoPage = lazy(() => import('../pages/supporto/supporto.page'))
 const ChisiamoPage = lazy(() => import('../pages/chiSiamo/chiSiamo.page'))
 const ServiziPage = lazy(() => import('../pages/servizi/servizi.page')) 
 const ImpresePage = lazy(() => import('../pages/imprese/imprese.page'))
 const HomePage = lazy(() => import('../pages/home/home.page'))
-const MapPage = lazy(() => import('../pages/map/map.page'))
+const MapPage=lazy(()=> import('../pages/map/map.page'));
+const Footer=lazy(()=>import('../components/footer/footer.component'))
 
 const App = () => {
   const { pathname } = useLocation()
@@ -27,7 +29,11 @@ const App = () => {
           <Route path='/' element = { <HomePage/> }/>
           <Route path='servizi' element = { <ServiziPage/> } />
           <Route path='servizi/luce-e-gas' element = { <LuceEGasPage/> }/> 
+          <Route path='servizi/imprese' element = { <h1>Fotovoltaico</h1>}/>
+          <Route path='servizi/polizze' element = { <h1>Fotovoltaico</h1>}/>
           <Route path='servizi/fotovoltaico' element = { <h1>Fotovoltaico</h1>}/>
+          <Route path='servizi/climatizzatore' element = { <ClimatizzatorePage /> }/>
+          <Route path='servizi/caldaie' element = { <h1>Fotovoltaico</h1>}/>    
           <Route path="imprese" element = { <ImpresePage/> }/>
           <Route path="dovesiamo" element = { <DoveSiamoPage/> }/>
           <Route path="chisiamo" element = { <ChisiamoPage/> }/>
@@ -38,6 +44,7 @@ const App = () => {
         </Routes>
       </Suspense>
       <ButtonContatta />
+      <Footer/>
     </div>
   )
 }

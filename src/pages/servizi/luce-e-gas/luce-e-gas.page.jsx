@@ -41,7 +41,6 @@ const LuceEGasPage = () => {
             <section className='servizio'>
                 <div className='sticky-div'>
                     <div className='componente-fisso'>
-                        <span className='titolo'>OFFERTE LUCE E GAS</span>
                         <div className='testo-con-barra'>
                             <span>Più energia per la tua casa</span>
                             <div 
@@ -219,5 +218,5 @@ export default LuceEGasPage
 Enel X foto da 1.9 a 6
 climatizzatore longbonus lg libero smart
 caldaia 1543
-luce e gas, imprese polize foto clima caldaie
+luce e gas, imprese polize foto clima caldaie 
 */

@@ -15,7 +15,7 @@ const personale = [
   {
     nome: 'Puma',
     img: 'https://i.ytimg.com/vi/WPe3GhiZXR4/hqdefault.jpg',
-    citazione: 'Porcoddio Diprè Diprè paura Mossa se voglio'
+    citazione: 'Diprè paura Mossa se voglio'
   }
 ]
 

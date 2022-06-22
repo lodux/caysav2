@@ -1,7 +1,6 @@
 .container-servizi {
-    margin: 0 50px;
+    margin: 50px;
     display: flex;
-    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-items: center;

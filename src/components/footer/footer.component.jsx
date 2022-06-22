@@ -1,24 +1,39 @@
 import './footer.styles.scss'
 
+
 const Footer = () => {
   return (
-    <div className='footcont'>
-        <div className="psinistra">
-            <h2 className='cay'>Cayman Group s.r.l.s</h2>
-            <span className='scritta'>
-            Cayman Group è partner di Enel Energia, con sede a Palermo in via Notarbartolo 9/D. 
-            I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione "dove siamo" del sito.
-            </span>
-        </div>
-        <div className="pdestra">
-            <h3 className="cay">Sede principale</h3>
-            <span className="scritta">
+    <footer className='footcont'>
+      <div className="colcont">
+         <div className="col">
+       <h4>Cayman Group s.r.l.s</h4>
+  	 			<ul>
+  	 				<li className='spancol'>Cayman Group è partner di Enel Energia, con sede a Palermo in via Notarbartolo 9/D. 
+            I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione "dove siamo" del sito.</li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="col">
+  	 			<h4>Sede principale</h4>
+  	 			<ul>
+  	 				<li className='spancol'>
             Via Notarbartolo 20,90145 Palermo, Sicilia (ITALIA)
             direzione@caymangroup.it
-            +393927498457
-            </span>
-        </div>
-    </div>
+			+393927498457</li>
+         
+  	 			</ul>
+  	 		</div>
+  	 		<div class="col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="https://www.facebook.com/caymangroupsrls/"><i class="fab fa-facebook"></i></a>
+  	 				<a href="https://www.tiktok.com/@caymangroupsrl?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="#"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+       </div>
+      </div>
+      
+    </footer>
   )
 }
 

@@ -12,8 +12,13 @@ const sezioni = [
     img_url: 'https://quifinanza.it/wp-content/uploads/sites/5/2018/11/impianto-fotovoltaico.jpg'
   },
   {
-    nome: 'fotovoltaico',
-    link: 'fotovoltaico',
+    nome: 'imprese',
+    link: 'imprese',
+    img_url: 'https://quifinanza.it/wp-content/uploads/sites/5/2018/11/impianto-fotovoltaico.jpg'
+  },
+  {
+    nome: 'polizze',
+    link: 'polizze',
     img_url: 'https://quifinanza.it/wp-content/uploads/sites/5/2018/11/impianto-fotovoltaico.jpg'
   },
   {
@@ -22,13 +27,13 @@ const sezioni = [
     img_url: 'https://quifinanza.it/wp-content/uploads/sites/5/2018/11/impianto-fotovoltaico.jpg'
   },
   {
-    nome: 'fotovoltaico',
-    link: 'fotovoltaico',
+    nome: 'climatizzatore',
+    link: 'climatizzatore',
     img_url: 'https://quifinanza.it/wp-content/uploads/sites/5/2018/11/impianto-fotovoltaico.jpg'
   },
   {
-    nome: 'fotovoltaico',
-    link: 'fotovoltaico',
+    nome: 'caldaie',
+    link: 'caldaie',
     img_url: 'https://quifinanza.it/wp-content/uploads/sites/5/2018/11/impianto-fotovoltaico.jpg'
   }
 ]
@@ -60,6 +65,7 @@ const ServiziPage = () => {
           </div>
         ))
       }
+  
     </div>
   )
 }

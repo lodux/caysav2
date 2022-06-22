@@ -6,11 +6,12 @@ $colore-tosto: rgb(60, 207, 236);
     bottom: 0;
     left: 70%;
     font-size: 40px;
-    width: 400px;
+    width: 360px;
     height: 80px;
     background-color:$colore-tosto;
     border: none;
     color: white;
+    z-index: 1000;
 
     &:hover {
         cursor: pointer;
@@ -31,4 +32,17 @@ $colore-tosto: rgb(60, 207, 236);
             height: auto;
         }
     }
+}
+   
+       
+        
+    
+.serviziocontainer{
+    position: fixed;
+    bottom: -30px;
+    left: 70%;
+    background-color: white;
+    z-index: 9999;
+ 
+
 }
