@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './navBar.styles.scss'
@@ -36,53 +36,66 @@ const elementiNavBar = [
 ];
 
 const NavBar = ({ linkAttuale }) => {
-    const [isMenuIconClicked, setIsMenuIconClicked] = useState(false)
+    const generaElementi = elementiNavBar.map((el, i) => (
+        <Link 
+            to={el.link} 
+            style={{textDecoration: 'none'}}
+            key={i}
+            className='elemento-container'
+        >
+            <span
+                className={`
+                    elemento
+                    ${ linkAttuale === el.link ? 'selezionato' : '' }                       
+                `}
+            // 'elemento' è la className che hanno tutti i componenti di default. 
+            //Cliccandolo, otterrà anche la className 'selezionato'. 
+            >
+                {el.nome}
+            </span>
+        </Link>                     
+    ))
+    const [isHidden, setIsHidden] = useState(true)
 
     return (
-        <div className={`
-            navbar-container
-            ${isMenuIconClicked ? 'vertical' : null}
-        `}>
-            <div className="logo">
-                <Link to=''>
-                    <img className="logoImg" alt='cayman-logo' src={LOGO_LINK} />
-                </Link>
+        <Fragment>
+            <div className='navbar-container'>
+                <div className="logo">
+                    <Link to=''>
+                        <img className="logoImg" alt='cayman-logo' src={LOGO_LINK} />
+                    </Link>
+                </div>
+                { generaElementi }
             </div>
-            {
-                elementiNavBar.map((el, i) => (
-                    <Link 
-                        to={el.link} 
-                        style={{textDecoration: 'none'}}
-                        key={i}
-                    >
+            {/*Da mobile verrà mostrato direttamente un altro component */}
+            <div className={`
+                navbar-laterale
+                ${ isHidden ? 'nascosta' : '' }
+            `}>
+                <img 
+                    src={menu}
+                    alt='menu-ico'
+                    className={`
+                        menu-ico
+                        ${!isHidden ? 'ico-nascosta' : '' }
+                    `}
+                    onClick={() => setIsHidden(false)}
+                />
+                <div className='container-laterale'>
+                    <div className='x-wrapper'>
+                        <img className="logoImg" alt='cayman-logo' src={LOGO_LINK} />
                         <span 
-                        className={`
-                            elemento
-                            ${ linkAttuale === el.link ? 'selezionato ' : null }                       
-                        `}
-                        // 'elemento' è la className che hanno tutti i componenti di default. 
-                        //Cliccandolo, otterrà anche la className 'selezionato'. 
-                        >
-                            {el.nome}
-                        </span>
-                    </Link>                     
-                ))
-            }
-            <img 
-                src={menu}
-                alt='menu-ico'
-                className='menu-ico'
-                onClick={
-                    () => setIsMenuIconClicked(prevState => !prevState)//switch tra true e false
-                }
-            />
-            <span 
-                className='x' 
-                onClick={
-                    () => setIsMenuIconClicked(false)
-                }
-            />
-        </div>
+                            className='x' 
+                            onClick={() => setIsHidden(true)}
+                        /> 
+                    </div> 
+                    <div className='esplora'>
+                        <span className='s1'>Esplora Cayman</span>
+                        { generaElementi }     
+                    </div> 
+                </div>             
+            </div>
+        </Fragment>
     )
 }
 
