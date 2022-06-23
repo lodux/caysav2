@@ -56,19 +56,19 @@ const LuceEGasPage = () => {
                         </div>
                         <div className='icone'>
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />                                                            
                         </div>
@@ -88,14 +88,14 @@ const LuceEGasPage = () => {
                             bloccato per i primi 24 mesi</span>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                     alt='ico'
                                 />
                                 <span>30% se provieni dal Mercato Libero</span>
                             </div>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                     alt='ico'
                                 />
                                 <span>Offerta monoraria!</span>
@@ -114,14 +114,14 @@ const LuceEGasPage = () => {
                             bloccato per i primi 24 mesi</span>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                     alt='ico'
                                 />
                                 <span>30% se provieni dal Mercato Libero</span>
                             </div>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                     alt='ico'
                                 />
                                 <span>Offerta monoraria!</span>
@@ -153,19 +153,19 @@ const LuceEGasPage = () => {
                         </div>
                         <div className='icone'>
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                 alt='icona'
                             />                                                            
                         </div>
@@ -185,14 +185,14 @@ const LuceEGasPage = () => {
                             bloccato per i primi 24 mesi</span>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                     alt='ico'
                                 />
                                 <span>30% se provieni dal Mercato Libero</span>
                             </div>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src='https://images2.corriereobjects.it/methode_image/2020/05/19/Economia/Foto%20Economia%20-%20Trattate/Silver_Provider%20energia-kdtH-RNm6Aoy0RFYQCnASBbzEPrN-656x492@Corriere-Web-Sezioni.jpg?v=20200713121450'
                                     alt='ico'
                                 />
                                 <span>Offerta monoraria!</span>                              
