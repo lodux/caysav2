@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react';
+import React from 'react'
+import { useState } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import dati from './data';
 
 import './map.styles.scss';
 
 export default function MapPage() {
-  const { via }=useParams();
+  const {via}=useParams();
   const [data,setDati]=useState([]);
 
   useEffect(() => {
@@ -43,8 +45,6 @@ export default function MapPage() {
     default:
       return
    }
-  
-
   },[via])
 
   return (
@@ -102,10 +102,10 @@ export default function MapPage() {
       </div>
       <div className="map">
       <iframe 
-         src={data.map}
-         title='x'
+         title='mappa'
+         src={data.mappa}
          width="600" 
-         height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+         height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
          className='mappa'>
          </iframe>
       </div>

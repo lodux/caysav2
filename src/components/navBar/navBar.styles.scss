@@ -60,10 +60,7 @@ $background: rgba($color: $colore-sfondo, $alpha: 0.2);
     height: 100%;
 
     .menu-ico {
-        margin-left: 73%;
-        background-color: $background;
-        padding: 30px;
-        width: 50px;
+        width: auto; /* La larghezza dipende da quella della navbar laterale nascosta */
         height: auto;
 
         &:hover {
@@ -165,7 +162,10 @@ $background: rgba($color: $colore-sfondo, $alpha: 0.2);
     }         
 
     &.nascosta {
-        background-color: transparent;   
+        width: 45px; 
+        background-color: transparent;
+        margin: 10px 24px 0 0;
+        height: auto;
 
         .container-laterale {
             display: none;
