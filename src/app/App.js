@@ -9,6 +9,7 @@ import NavBar from "../components/navBar/navBar.component";
 const ClimatizzatorePage = lazy(() => import('../pages/servizi/climatizzatore/climatizzatore.page')) 
 const LuceEGasPage = lazy(() => import('../pages/servizi/luce-e-gas/luce-e-gas.page')) 
 const ContattaciPage = lazy(() => import('../pages/contattaci/contattaci.page'))
+const CaldaiePage = lazy(() => import('../pages/servizi/caldaie/caldaie.page'))
 const DoveSiamoPage = lazy(() => import('../pages/doveSiamo/doveSiamo.page')) 
 const SupportoPage = lazy(() => import('../pages/supporto/supporto.page'))
 const ChisiamoPage = lazy(() => import('../pages/chiSiamo/chiSiamo.page'))
@@ -33,7 +34,7 @@ const App = () => {
           <Route path='servizi/polizze' element = { <h1>Fotovoltaico</h1>}/>
           <Route path='servizi/fotovoltaico' element = { <h1>Fotovoltaico</h1>}/>
           <Route path='servizi/climatizzatore' element = { <ClimatizzatorePage /> }/>
-          <Route path='servizi/caldaie' element = { <h1>Fotovoltaico</h1>}/>    
+          <Route path='servizi/caldaie' element = { <CaldaiePage /> }/>    
           <Route path="imprese" element = { <ImpresePage/> }/>
           <Route path="dovesiamo" element = { <DoveSiamoPage/> }/>
           <Route path="chisiamo" element = { <ChisiamoPage/> }/>
