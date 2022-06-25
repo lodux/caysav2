@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react'
 import './luce-e-gas.styles.scss'
 
+import stella from './3.png'
+import salvadanaio from './4.png'
+import lampadina from './5.png'
+import casa from './6.png'
+
 const LuceEGasPage = () => {
     const [scrollPosition, setScrollPosition] = useState(0)
 
@@ -56,19 +61,19 @@ const LuceEGasPage = () => {
                         </div>
                         <div className='icone'>
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={lampadina}
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={casa}
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={lampadina}
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={casa}
                                 alt='icona'
                             />                                                            
                         </div>
@@ -88,14 +93,14 @@ const LuceEGasPage = () => {
                             bloccato per i primi 24 mesi</span>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src={salvadanaio}
                                     alt='ico'
                                 />
                                 <span>30% se provieni dal Mercato Libero</span>
                             </div>
-                            <div className='icona-con-testo'>
+                            <div className='icona-con-testo stella'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src={stella}
                                     alt='ico'
                                 />
                                 <span>Offerta monoraria!</span>
@@ -114,25 +119,25 @@ const LuceEGasPage = () => {
                             bloccato per i primi 24 mesi</span>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src={salvadanaio}
                                     alt='ico'
                                 />
                                 <span>30% se provieni dal Mercato Libero</span>
                             </div>
-                            <div className='icona-con-testo'>
+                            <div className='icona-con-testo stella'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src={stella}
                                     alt='ico'
                                 />
                                 <span>Offerta monoraria!</span>
-                            </div>    
+                            </div>  
                             <button className='bottone-offerta'>
                                 <a href='#prova'>VEDI OFFERTA</a>
-                            </button>                                               
+                            </button>                  
                         </div>
                         <div className='immagine-annuncio'>
                         </div>
-                    </div>                                       
+                    </div>                                      
                 </div>
             </section>
             <section className='servizio'>
@@ -153,19 +158,19 @@ const LuceEGasPage = () => {
                         </div>
                         <div className='icone'>
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={lampadina}
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={casa}
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={lampadina}
                                 alt='icona'
                             />
                             <img 
-                                src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                src={casa}
                                 alt='icona'
                             />                                                            
                         </div>
@@ -185,27 +190,27 @@ const LuceEGasPage = () => {
                             bloccato per i primi 24 mesi</span>
                             <div className='icona-con-testo'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src={salvadanaio}
                                     alt='ico'
                                 />
                                 <span>30% se provieni dal Mercato Libero</span>
                             </div>
-                            <div className='icona-con-testo'>
+                            <div className='icona-con-testo stella'>
                                 <img 
-                                    src='https://cdn.onlinewebfonts.com/svg/img_503325.png'
+                                    src={stella}
                                     alt='ico'
                                 />
-                                <span>Offerta monoraria!</span>                              
-                            </div>                    
+                                <span>Offerta monoraria!</span>
+                            </div>  
                             <button className='bottone-offerta'>
                                 <a href='#prova'>VEDI OFFERTA</a>
-                            </button>   
+                            </button>                  
                         </div>
                         <div className='immagine-annuncio'>
                         </div>
-                    </div>                                    
+                    </div>                                      
                 </div>
-            </section>            
+            </section>           
         </div>
     )
 }
