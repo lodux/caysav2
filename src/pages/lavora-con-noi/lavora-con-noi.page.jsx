@@ -1,5 +1,7 @@
 import './lavora-con-noi.styles.scss'
 
+import ico from './plus.png'
+
 const LavoraConNoi = () => {
 
     return (
@@ -13,10 +15,13 @@ const LavoraConNoi = () => {
                     Carica il tuo CV corredato di recapito telefonico e indirizzo mail.
                     Sarà nostra cura fissarti un colloquio conoscitivo il prima possibile
                 </span>
-                <div className='cv'>
+                <label htmlFor='cv'
+                    onClick={() => window.open('mailto:saveriorandazzo51@gmail.com?subject=CV')}
+                >
+                    <img src={ico} alt='add' />
                     <input id='cv' type='file' />
-                    <label for='cv'>Carica il tuo CV</label>
-                </div>
+                    CARICA IL TUO CV
+                </label>
             </div>
         </div>
     )
