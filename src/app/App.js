@@ -9,7 +9,8 @@ import NavBar from "../components/navBar/navBar.component";
 import prodotti from "./prodotti";
 
 //import con lazy per migliorare la performance
-const LuceEGasPage = lazy(() => import('../pages/servizi/luce-e-gas/luce-e-gas.page')) 
+const LavoraConNoiPage = lazy(() => import('../pages/lavora-con-noi/lavora-con-noi.page'))
+const LuceEGasPage = lazy(() => import('../pages/servizi/luce-e-gas/luce-e-gas.page'))
 const ProdottiPage = lazy(() => import('../pages/servizi/prodotti/prodotti.page'))
 const ContattaciPage = lazy(() => import('../pages/contattaci/contattaci.page'))
 const ImpresePage = lazy(() => import('../pages/servizi/imprese/imprese.page'))
@@ -39,6 +40,7 @@ const App = () => {
           <Route path='servizi/caldaie' element = { <ProdottiPage prodotto={prodotti.caldaie} /> }/>    
           <Route path="servizi/imprese" element = { <ImpresePage/> }/>
           <Route path="dovesiamo" element = { <DoveSiamoPage/> }/>
+          <Route path="lavora-con-noi" element = { <LavoraConNoiPage/> }/>
           <Route path="chisiamo" element = { <ChisiamoPage/> }/>
           <Route path="supporto" element = { <SupportoPage/> }/>
           <Route path="contattaci" element = { <ContattaciPage/> }/>
