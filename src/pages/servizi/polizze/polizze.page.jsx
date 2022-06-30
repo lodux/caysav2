@@ -108,13 +108,7 @@ const Polizze = () => {
                     className='polizza'
                     onClick={() => navigate('/supporto', { replace: true })}
                 >
-                    <div className='background-img'>
-                        <div className='riga-blu'>
-                            <span>
-                                MAGGIORI INFO
-                            </span>
-                        </div>                         
-                    </div>                 
+                    <div className='background-img' />                
                     <div className='wrapper'>
                         <span className='titolo-polizza'>Enel X</span>
                         <span className='desc-polizza'>Protezione Gas 360</span>

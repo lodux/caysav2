@@ -61,6 +61,7 @@ $background: rgba($color: $colore-sfondo, $alpha: 0.2);
     width: 400px;
     background-color: #1D0175;
     height: 100%;
+    transition: all .2s linear; 
 
     .menu-ico {
         width: auto; /* La larghezza dipende da quella della navbar laterale nascosta */
@@ -169,6 +170,7 @@ $background: rgba($color: $colore-sfondo, $alpha: 0.2);
         background-color: transparent;
         margin: 10px 24px 0 0;
         height: auto;
+        transition: none;
 
         .container-laterale {
             display: none;
@@ -177,5 +179,9 @@ $background: rgba($color: $colore-sfondo, $alpha: 0.2);
 
     @media only screen and (min-width: 1200px) {
         display: none;
-    }    
+    }   
+    
+    @media only screen and (max-width: 730px) {
+        width: 100%;
+    }  
 }

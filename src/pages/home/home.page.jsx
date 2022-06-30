@@ -2,12 +2,18 @@ import { useEffect, useState, useRef } from 'react'
 
 import './home.styles.scss'
 
+import img1 from './background-images/1.svg'
+import img2 from './background-images/2.svg'
+import img3 from './background-images/3.svg'
+import img4 from './background-images/4.svg'
+import img5 from './background-images/5.svg'
+
 const galleriaDiImmagini = [
-    'https://i.imgur.com/Bvjfcjy.png',
-    'https://i.imgur.com/b4mfMq9.jpeg',
-    'https://cdn.wallpapersafari.com/22/23/E3vNtI.jpg',
-    'https://wallpaperaccess.com/full/343619.jpg',
-    'https://cdn.gobankingrates.com/wp-content/uploads/2019/05/Davao-City-in-the-Phillippines-shutterstock_504042466.jpg'
+    img1,
+    img2,
+    img3,
+    img4,
+    img5
 ]
 
 const delay = 6000
@@ -39,17 +45,17 @@ const HomePage = () => {
                 className='slide-container'
                 style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
-                {
-                    galleriaDiImmagini.map((img, i) => (
-                        <div 
-                            key={i}
-                            className='slide'
-                            style={{
-                                'background': `url(${img}) no-repeat center center fixed`
-                            }}                            
-                        >
-                        </div>
-                    ))
+            {
+                galleriaDiImmagini.map((img, i) => (
+                    <div 
+                        key={i}
+                        className='slide'
+                        style={{
+                            'background': `url(${img}) no-repeat center center fixed`
+                        }}                            
+                    >
+                    </div>
+                ))
             }
             </div>
             <div className="punti-container">

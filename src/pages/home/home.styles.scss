@@ -16,10 +16,10 @@ $colore-tosto: #2FA7CF;
             display: inline-block;
             height: 100%;
             width: 100%;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;      
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;     
           }
     }
 
@@ -45,7 +45,21 @@ $colore-tosto: #2FA7CF;
 
             &.active {
                 background-color: white;
+            }           
+        }       
+    }
+
+    @media only screen and (max-width: 730px) {
+
+        .punti-container {
+            top: 80%;
+
+            .punto {
+                height: 17px;
+                width: 17px;
+                border-width: 1.5px;
+                margin: 10px;
             }
         }
-    }
+    }      
 }

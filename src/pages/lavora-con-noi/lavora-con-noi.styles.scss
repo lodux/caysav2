@@ -30,7 +30,7 @@
             max-width: 70%;
         }      
        
-        label {
+        .cv {
             color: #fff;
             font-weight: bold;
             display: flex;
@@ -49,11 +49,7 @@
             img {
                 width: 30px;
                 height: auto;
-            }            
-
-            input[type="file"] {
-                display: none;
-            }                
+            }                    
         }   
     }
 }

@@ -1,46 +1,107 @@
 $colore-tosto: rgb(60, 207, 236);
 
-.button-contattaci {
+.button-wrapper {
     position: fixed;
-    text-decoration: underline;
     bottom: 0;
-    left: 70%;
-    font-size: 40px;
-    width: 360px;
-    height: 80px;
-    background-color:$colore-tosto;
-    border: none;
-    color: white;
-    z-index: 1000;
+    width: 100%; 
 
-    &:hover {
-        cursor: pointer;
-    }
+    .flex-container {
+        display: flex;
 
-    .icona-messaggio {
-        width: 55px;
-        position: absolute;
-        display: inline-block;
-        top: -63px;
-        right: -40px;
-        background-color: $colore-tosto;
-        border-radius: 50%;
-        padding: 10px;
+        .hover-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;  
+            margin-right: 100px;   
+            transition: all .2s linear;   
+            
+            &:hover {
+                transform: scale(1.1);
+            }              
 
-        img {
-            margin-top: 5px;
-            width: 100%;
-            height: auto;
+            .button-contattaci {     
+                text-decoration: underline;
+                font-size: 40px;
+                width: 320px;
+                height: 80px;
+                background-color:$colore-tosto;
+                border: none;
+                color: white;
+                z-index: 1000;
+                cursor: pointer;               
+            }    
+    
+            .icona-wrapper {
+                position: relative;
+                margin-left: auto;    
+                cursor: pointer;     
+    
+                .icona-messaggio {
+                    width: 52px;
+                    position: absolute;
+                    top: -60px;
+                    right: -50px;
+                    background-color: $colore-tosto;
+                    border-radius: 50%;
+                    padding: 10px;
+                    padding-top: 15px;
+            
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }             
+            } 
+        }          
+    }  
+
+    @media only screen and (max-width: 730px) {
+        .flex-container {
+            -webkit-backface-visibility: hidden;
+
+            .hover-wrapper {
+                margin-right: auto;
+                margin-left: auto;
+                flex-direction: row;
+                justify-content: flex-end;
+                width: 100%;
+
+                &:hover {
+                    transform: none;
+                }
+
+                .button-contattaci {
+                    display: none;
+                }
+
+                .icona-wrapper {
+                    margin: 20px;
+                    transition: all .2s linear; 
+
+                    .icona-messaggio {
+                        position: relative;
+                        width: 40px;
+                        top: 0;
+                        right: 0;
+                    }
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }                     
+                }
+            }
         }
-    }
+    }    
 }
    
-.serviziocontainer{
+.serviziocontainer {
     position: fixed;
     bottom: -30px;
     left: 70%;
     background-color: white;
     z-index: 9999;
- 
-
+    box-shadow: 0 10px 25px #bbbbbbbb;
+    animation-duration: 2s;   
+    animation: bounceInUp; // referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.8s; /* don't forget to set a duration! */
 }
