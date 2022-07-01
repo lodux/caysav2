@@ -5,14 +5,14 @@ import 'animate.css'
 import CheckIcon from './ok.png'
 
 //style per il bottone
-import './buttonContatta.styles.scss'
+import './contattaci-button.styles.scss'
 //style per la sezione clienti
 import './contattaci.styles.scss'
 
 import iconaMessaggio from './2.png'
 
 //button da usare nella homepage
-const ButtonContatta = () => {
+const ContattaciButton = () => {
   const [isClicked, setClick] = useState(false);
   const [pag1, setPag1]=useState(false);
   const [pag2, setPag2]=useState(false);
@@ -296,4 +296,4 @@ const ButtonContatta = () => {
   )
 }
 
-export default ButtonContatta
+export default ContattaciButton

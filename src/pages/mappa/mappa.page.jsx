@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import dati from './data';
 
-import './map.styles.scss';
+import './mappa.styles.scss';
 
-export default function MapPage() {
+const Mappa = () => {
   const {via}=useParams();
   const [data,setDati]=useState([]);
 
@@ -114,3 +114,5 @@ export default function MapPage() {
 
   )
 }
+
+export default Mappa
