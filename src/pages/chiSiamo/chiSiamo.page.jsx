@@ -10,7 +10,7 @@ const personale = [
   {
     nome: 'Nome',
     img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-    citazione: 'I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione contatti del sito. Per info visitate le nostre pagine socialPer info visitate le nostre pagine socialPer info visitate le nostre pagine socialPer info visitate le nostre pagine socialPer info visitate le nostre pagine social'
+    citazione: 'I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione contatti del sito. Per info visitate le nostre pagine social'
   },
   {
     nome: 'Nome',
