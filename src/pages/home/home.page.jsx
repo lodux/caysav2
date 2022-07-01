@@ -9,7 +9,7 @@ import img4 from './background-images/4.webp'
 import img5 from './background-images/5.webp'
 
 const galleriaDiImmagini = [
-    img1,
+    'https://i.ibb.co/LCzz4P4/1.webp',
     img2,
     img3,
     img4,
