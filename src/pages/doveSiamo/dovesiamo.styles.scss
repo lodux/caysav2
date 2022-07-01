@@ -3,65 +3,85 @@
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-}
 
-.sedi {
-    color: black;
-}
+    .scrittasup {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: #2cbade 1.5px solid;
+        width: 90%;
 
-.scrittasup{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 30px;
-    border-bottom: #2cbade 1.5px solid;
-    width: 90%;
-}
+        .spansede {
+            margin-top: 40px;
+            color: #2cbade;
+        }    
+        
+        .sedi {
+            color: black;
+        }        
+    }   
 
-.cittaContainer {
-    margin-top: 90px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    align-items: flex-start;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 90%;
-}
+    .cittaContainer {
+        margin-top: 90px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        align-items: flex-start;
+        width: 90%;
+    
+        .city {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px;
+            margin-bottom: 5%;
+    
+            .cityname {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }     
+            
+            .link {
+                text-decoration: none;
+                color: black;
+    
+                .fa {
+                    margin-left: 15px;
+                }
+                
+                .adress {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                    display: flex;
+                    align-items: center;
+                }            
+            }        
+        }          
+    }        
+    
+    @media only screen and (max-width: 730px) {
+        justify-content: center;
+        margin-top: 60px;
 
-.link {
-    text-decoration: none;
-    color: black;
-}
+        .scrittasup {
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
 
-.spansede{
-    margin-top: 40px;
-    color: #2cbade;
-}
+        .cittaContainer {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            margin-left: 20px;
+            width: auto;   
 
-.city {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    margin-bottom: 5%;
-}
-
-.cityname {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.fa {
-    margin-left: 15px;
-}
-
-.adress {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    display: flex;
-    align-items: center;
+            .city {   
+                margin-left: 0;      
+            }            
+        }
+    }
 }

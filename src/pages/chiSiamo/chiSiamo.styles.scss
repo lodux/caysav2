@@ -15,7 +15,6 @@
             background-position: 0% 50%;
         }
     }
-    
 
     .titolo {
         position: relative;
@@ -60,7 +59,7 @@
     }
 
     .tizio-container {
-        width: 70%;
+        width: 85%;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -95,7 +94,8 @@
             border-bottom-right-radius: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            position: relative;
 
             span {
                 color: #fff;
@@ -103,20 +103,96 @@
 
             .virgolette {
                 font-size: 50px;
-                margin: 10px;
+                position: absolute;
+                top: 0;
+                left: 1%;
 
                 &.end {
                     margin-left: auto;
-                }
+                    top: 77%;
+                    left: 97%;
+
+                    @media only screen and (max-width: 1430px) {
+                        left: 95%;
+                    }     
+                    
+                    @media only screen and (max-width: 1430px) {
+                        left: 93%;
+                    }                     
+                }               
             }
 
             .testo {
                 margin: 0 auto;
                 text-align: center;
                 font-weight: bolder;
-                font-size: 20px;
-                max-width: 300px;
+                font-size: 15px;
+                padding: 40px;
             }         
+        }
+    }
+
+    @media only screen and (max-width: 730px) {
+        padding-top: 0;
+
+        .titolo {
+            font-size: 30px;
+            margin: 40px 0;
+        }
+
+        .citazione-container {
+            min-height: 0;
+
+            .virgolette {
+                font-size: 20px;
+            }
+
+            .citazione {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .tizio-container {
+            width: auto;
+            padding: 20px 10px;
+
+            .foto {
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;                    
+                }
+
+                span {
+                    font-size: 10px;
+                    border-radius: 0 0 7px 7px;
+                }                
+            }
+
+            .presentazione {
+                height: 70px;
+                justify-content: center;
+                position: relative;
+
+                .virgolette {
+                    font-size: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    &.end {
+                        top: 45px;
+                        left: 96%;
+                    }
+                }
+
+                .testo {
+                    font-size: 10px;
+                }                
+            }
         }
     }
 }

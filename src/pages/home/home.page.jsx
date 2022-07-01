@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from 'react'
 
 import './home.styles.scss'
 
-import img1 from './background-images/1.svg'
-import img2 from './background-images/2.svg'
-import img3 from './background-images/3.svg'
-import img4 from './background-images/4.svg'
-import img5 from './background-images/5.svg'
+import img1 from './background-images/1.webp'
+import img2 from './background-images/2.webp'
+import img3 from './background-images/3.webp'
+import img4 from './background-images/4.webp'
+import img5 from './background-images/5.webp'
 
 const galleriaDiImmagini = [
     img1,

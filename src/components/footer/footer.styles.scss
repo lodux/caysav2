@@ -77,12 +77,15 @@
         height: auto;
 
         .colcont {
-
             width: auto;
+
+            h4 {
+                margin: 25px 0;
+            }
         }
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 730px) {
 
         .colcont {
             flex-direction: column;
@@ -90,24 +93,25 @@
             margin: 0;
 
             .col {
-                width: auto;
+                width: 100%;
                 margin: 0;
+                padding: 0;
 
                 h4 {
-                    margin: 25px 0;
-
-                    &.follow-us {
-                        width: 90vw;
-    
-                    }            
+                    margin-left: 10px;
                 }
 
                 ul {
                         
                     li {
-                        margin: 10px;
+                        padding: 10px;
+                        margin: 0;
                     }
-                }                
+                }  
+                
+                .social-links {
+                    margin-left: 10px;
+                }
             }
         }
     }

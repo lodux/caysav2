@@ -22,10 +22,15 @@ const ButtonContatta = () => {
   const Button = () => {    
     const navigate = useNavigate()
 
-    const handleClick = () => {
+    const iconClick = () => {
       window.innerWidth <= 730 ? //L'icona renderizza soltanto se la larghezza della pagina è di tot pixel
         navigate('/supporto', { replace: true })
       : 
+        setClick(true)
+    }
+
+    const buttonClick = () => {
+      if(window.innerWidth > 730)
         setClick(true)
     }
 
@@ -36,12 +41,12 @@ const ButtonContatta = () => {
     return (
     <div 
     className="button-wrapper"
-    onClick={()=> handleClick()}>
+    onClick={()=> buttonClick()}>
       <div className='flex-container'>
         <div className='hover-wrapper'>
           <div 
             className='icona-wrapper'
-            onClick={() => handleClick()}
+            onClick={() => iconClick()}
           >
             <div className='icona-messaggio'>
               <img 
