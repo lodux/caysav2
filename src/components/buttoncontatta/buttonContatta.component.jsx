@@ -40,10 +40,12 @@ const ButtonContatta = () => {
 
     return (
     <div 
-    className="button-wrapper"
-    onClick={()=> buttonClick()}>
+    className="button-wrapper">
       <div className='flex-container'>
-        <div className='hover-wrapper'>
+        <div 
+          className='hover-wrapper' 
+          onClick={()=> buttonClick()}
+        >
           <div 
             className='icona-wrapper'
             onClick={() => iconClick()}

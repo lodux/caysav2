@@ -1,12 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom"
 import { Suspense, lazy } from "react"
-import './App.scss';
+import './App.scss'
 
-import ButtonContatta from "../components/buttoncontatta/buttonContatta.component";
-import NavBar from "../components/navBar/navBar.component";
+import LoadingSpinner from "../components/loading-spinner/loading-spinner.component"
+import ButtonContatta from "../components/buttoncontatta/buttonContatta.component"
+import NavBar from "../components/navBar/navBar.component"
 
 //per la sezione "servizi"
-import prodotti from "./prodotti";
+import prodotti from "./prodotti"
 
 //import con lazy per migliorare la performance
 const LavoraConNoiPage = lazy(() => import('../pages/lavora-con-noi/lavora-con-noi.page'))
@@ -20,7 +21,7 @@ const SupportoPage = lazy(() => import('../pages/supporto/supporto.page'))
 const ChisiamoPage = lazy(() => import('../pages/chiSiamo/chiSiamo.page'))
 const ServiziPage = lazy(() => import('../pages/servizi/servizi.page')) 
 const HomePage = lazy(() => import('../pages/home/home.page'))
-const MapPage=lazy(()=> import('../pages/map/map.page'));
+const MapPage=lazy(()=> import('../pages/map/map.page'))
 const Footer=lazy(()=>import('../components/footer/footer.component'))
 
 const App = () => {
@@ -29,7 +30,7 @@ const App = () => {
   return (
     <div className='App'> 
       <NavBar linkAttuale = { pathname }/>
-      <Suspense fallback={<span>Loading...</span>}>
+      <Suspense fallback={<LoadingSpinner /> }>
         <Routes>
           <Route path='/' element = { <HomePage/> }/>
           <Route path='servizi' element = { <ServiziPage/> } />
@@ -54,4 +55,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App
