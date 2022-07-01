@@ -2,18 +2,12 @@ import { useEffect, useState, useRef } from 'react'
 
 import './home.styles.scss'
 
-import img1 from './background-images/1.webp'
-import img2 from './background-images/2.webp'
-import img3 from './background-images/3.webp'
-import img4 from './background-images/4.webp'
-import img5 from './background-images/5.webp'
-
 const galleriaDiImmagini = [
     'https://i.ibb.co/LCzz4P4/1.webp',
-    img2,
-    img3,
-    img4,
-    img5
+    'https://i.ibb.co/txwnt76/2.webp',
+    'https://i.ibb.co/XCHDFpx/3.webp',
+    'https://i.ibb.co/S6F1rtc/4.webp',
+    'https://i.ibb.co/P5GwHPz/5.webp'
 ]
 
 const delay = 6000
