@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import CheckIcon from './ok.png';
@@ -17,48 +17,46 @@ const Fattichiamare = () => {
     <div className="scfrases">
       <i
         onClick={()=>setPag2(true)}
-        className="fa fa-arrow-left" style={{fontSize:"22px"}}>
-      </i>
+      className="fa fa-arrow-left" style={{fontSize:"22px"}}></i>
       <span className="scfrase">
         Inserisci i tuoi dati e un nostro operatore ti richiamerà prima possibile
-      </span>
+        </span>
     </div>
-    <div className="scinputchiama">
-      <input 
+    <form onSubmit={()=>setRen(true)} className="scinputchiama">
+      <input
+      required
       type="text" 
       min="10" 
       max="11"
       placeholder='Numero di telefono'
       className='scinp' /> 
-      <input 
+      <input
+      required
       type="text" 
       placeholder='Nome'
       className='scinp' /> 
-      <input 
+      <input
+      required 
       type="text" 
       placeholder='Cognome'
-      className='scinp' /> 
-
-    </div>
-    <div className="scfascia">
-    <span className="scfasciao">fascia oraria</span>
+      className='scinp' 
+      style={{marginBottom:"12px"}}/>          
+      <span className="scfasciao">fascia oraria: </span>      
     <input 
+      required
       type="date" 
       placeholder='Giorno'
-      className='scinpgiorno' /> 
+      className='scinp' /> 
       <input 
-      type="text" 
+      id='orario'
+      required
+      type="time" 
       placeholder='ora'
-      className='scinpora' /> 
-    </div>
-
+      className='scinp' 
+      /> 
+      <button type='submit'>FATTI CHIAMARE</button>
+    </form>
     <div className="sctastofatti">
-        <span 
-        onClick={()=>setRen(true)}
-        className="scbottonefattichiamare">
-        CHIAMAMI GRATIS
-        </span>
-        <i class='fa fa-angle-right' style={{color:"2E5C00",fontSize:"20px"}}></i> 
     </div>
   
     <div className="scfraseinf">
@@ -84,13 +82,13 @@ const Rendirizzamento=()=>{
       </div>
       <div className="scsupportoContainer">
     <div className="sccentro">
-          <img src={CheckIcon} style={{color:"#2cbdea",width:"280px"}}/>
-          <h3 className="scmess">
-        Grazie per aver inoltrato la tua richiesta
-        </h3> 
-        <span className="scmessca">
-          Abbiamo preso in carico la tua richiesta. Un nostro esperto ti chiamerà al più presto
-        </span>
+      <img alt='img' src={CheckIcon} style={{color:"#2cbdea",width:"280px"}}/>
+      <h3 className="scmess">
+    Grazie per aver inoltrato la tua richiesta
+    </h3> 
+    <span className="scmessca">
+      Abbiamo preso in carico la tua richiesta. Un nostro esperto ti chiamerà al più presto
+    </span>
     </div>    
 
     <button className="scchiudibutt" 
@@ -98,7 +96,6 @@ const Rendirizzamento=()=>{
       CHIUDI
     </button>
     </div>
-
     </div>
   )
 }
@@ -106,56 +103,58 @@ const Rendirizzamento=()=>{
 //scelta tra fatti chiamare o chiama
 const Scelta = () => {
   const [fatti, setFattichiamare]=useState(false);
+  useEffect(() => {
+    setPag2(false)
+  }, [])
   return(
-    <>
+    <div className='spcont'>
      <div className="spbanner">
         <span className="spbannerfrase">
           Supporto Cayman
         </span>
       </div>
-    { fatti==false || pag2 ? (
-      <div className="scContainer">
-      <div className="scpartealta">
-        {setPag2(false)}
-        <i
-        onClick={()=>setChiama(false)}
-        class="fa fa-arrow-left" style={{fontSize:"22px"}}></i>
-         <h2 className='scscegliscritta'>Scegli come contattarci</h2>
-      
-    </div>
- 
-  {/* option chiamata */}
-  <a href='https://youtube.com' style={{textDecoration:"none",color:"#000"}}>
-  <div className='scoption1'>
-        <i className="fa fa-phone" style={{paddingLeft:"7%",fontSize:"60px"}} /> {/* immagine telefono */}
-    <div className="scpiii">
+    { fatti===false || pag2 ? (
+      <div className='scwrapper'>
+        <div className="scContainer">
+        <div className="scpartealta">
+          <i
+          onClick={()=>setChiama(false)}
+          className="fa fa-arrow-left" style={{fontSize:"22px"}}></i>
+          <h2 className='scscegliscritta'>Scegli come contattarci</h2>
+        
+      </div>
   
-      <span className="scnverde">CHIAMACI</span>
-       Chiama +39.0123.456789! 
-    </div> 
-
-       
-
- <i className='fa fa-angle-right' style={{fontSize:"34px",display:"flex",alignItems:"center"}}></i>
-  </div>
- </a>
-  {/* option whatsapp */}
-  <div className='scoption2' onClick={()=>setFattichiamare(true)}>
-      <i className='fa fa-phone' style={{paddingLeft:"7%",color:"#4c8b0d",fontSize:"60px"}}></i> {/* immagine telefono */}
+    {/* option chiamata */}
+    <a href='https://youtube.com' style={{textDecoration:"none",color:"#000"}}>
+    <div className='scoption1'>
+          <i className="fa fa-phone" /> {/* immagine telefono */}
       <div className="scpiii">
-      
-      <span className="scfattichiamare">FATTICHIAMARE</span>
-      <span className='scavviachat'>inserisci i tuoi dati e ti contatteremo</span>
-    </div> 
-  
-     <i class='fa fa-angle-right' style={{color:"#4c8b0d",fontSize:"34px",display:"flex",alignItems:"center"}}></i>  
-  </div>
-  </div>
+    
+        <span className="scnverde">CHIAMACI</span>
+      </div> 
+
+        
+
+  <i className='fa fa-angle-right c'></i>
+    </div>
+  </a>
+    {/* option whatsapp */}
+    <div className='scoption2scelta' onClick={()=>setFattichiamare(true)}>
+        <i className='fa fa-phone fc' ></i> {/* immagine telefono */}
+        <div className="scpiii">
+        
+        <span className="scfattichiamare">FATTICHIAMARE</span>
+      </div> 
+    
+      <i className='fa fa-angle-right fc'></i>  
+    </div>
+        </div>
+      </div>
     ) : (
     <Fattichiamare/>
     
     )} 
-    </>
+    </div>
   )
 
 }
@@ -167,7 +166,7 @@ const Scelta = () => {
           Le Nostre Sedi
         </h1>
         <button className="frasiTit">
-          <Link to='/dovesiamo' style={{textDecoration:"none",color:"#000"}}>
+          <Link to='/dovesiamo' style={{textDecoration:"none"}}>
               trova la sede cayman più vicina a te
           </Link>
         </button>
@@ -186,11 +185,16 @@ const Scelta = () => {
       </div>
       {/* servizio clienti */}
           <>
+            <div className='scwrapper'>
+              <div className="scContainer">
+            </div>            
+            <div className="scpartealta">
 
-           <div className="scContainer">
-            <h1 className='sceglifrase'>Scegli come contattarci</h1>
+         <h2 className='scscegliscritta'>Scegli come contattarci</h2>
+      
+    </div>
           <div className='scoption1' onClick={()=>setChiama(true)}>
-          <i class='fa fa-phone' style={{fontSize:"60px", paddingLeft:"7%"}} /> {/* immagine telefono */}
+          <i className='fa fa-phone'  /> {/* immagine telefono */}
           
             <div className='scpiii'>  
             <div className='scps'>
@@ -198,27 +202,24 @@ const Scelta = () => {
                 <span className='scnum'>NUMERO</span>
               </div>
             </div> 
-            
-              <span>chiamaci o fatti chiamare</span>
             </div>  
-            <i class='fa fa-angle-right' style={{fontSize:"34px",display:"flex",alignItems:"center",justifyContent:"flex-end"}}></i>
+            <i className='fa fa-angle-right n'></i>
           </div>
-          <a href='https://youtube.com' style={{textDecoration:"none",color:"#000"}}>
+          <a href=' https://wa.me/3755112341' style={{textDecoration:"none",color:"#000"}}>
           <div className='scoption2'>
        
-          <i class='fa fa-whatsapp' style={{color:"#00FF00",fontSize:"60px",paddingLeft:"7%"}}></i> {/* immagine telefono */}
+          <i className='fa fa-whatsapp'></i> {/* immagine telefono */}
               
               <div className='scpiii'>
               <div className="scps">
                 
                 <div className="">
-                <span className='scchat'>CHAT WATSAPP</span>  
+                <span className='scchat'>CHAT WHATSAPP</span>  
 
                 </div>
               </div> 
-              <span className='scavviachat'>avvia una chat whatsapp con un consulente</span>
               </div>
-              <i className='fa fa-angle-right' style={{fontSize:"34px",color:"#00FF00"}}></i>
+              <i className='fa fa-angle-right'></i>
               
          </div>
         </a>
@@ -242,9 +243,9 @@ const Scelta = () => {
 
   return(
     <>
-    { chiama==true ? (
+    { chiama===true ? (
       <>
-      {rend==true ? (
+      {rend===true ? (
         <>
         <Rendirizzamento/>
         <Sedi/>

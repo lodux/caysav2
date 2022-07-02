@@ -9,18 +9,16 @@ import salvadanaio from './4.png'
 import lampadina from './5.png'
 import casa from './6.png'
 
-const LuceEGasPage = () => {
-
-    return (
-        <div className='pagina-dei-servizi'>
-        {
-            dati.map(({
-                nome,
-                titolo,
-                descrizione,
-                offerte
-            }) => (
-                <section className='servizio' key={nome}>
+const LuceEGasPage = () => (
+    <div className='pagina-dei-servizi'>
+    {
+        dati.map(({
+            nome,
+            titolo,
+            descrizione,
+            offerte
+        }) => (
+            <section className='servizio' key={nome}>
                 <div className='sticky-div'>
                     <div className='componente-fisso'>
                         <span className='testo'>{titolo}</span>
@@ -54,50 +52,42 @@ const LuceEGasPage = () => {
                         testo2,
                         backgroundImg
                     }) => (
-                        <div className='componente-laterale' key={titolo}>
-                            <div className='annuncio'>
-                                <span className='titolo'>{titolo}</span>
-                                <span className='desc'>{descrizione}</span>
-                                <div className='icona-con-testo'>
-                                    <img 
-                                        src={salvadanaio}
-                                        alt='ico'
-                                    />
-                                    <span>{testo1}</span>
+                        <div className='wrapper-laterale'>
+                            <div className='componente-laterale' key={titolo}>
+                                <div className='annuncio'>
+                                    <span className='titolo'>{titolo}</span>
+                                    <span className='desc'>{descrizione}</span>
+                                    <div className='icona-con-testo'>
+                                        <img 
+                                            src={salvadanaio}
+                                            alt='ico'
+                                        />
+                                        <span>{testo1}</span>
+                                    </div>
+                                    <div className='icona-con-testo stella'>
+                                        <img 
+                                            src={stella}
+                                            alt='ico'
+                                        />
+                                        <span>{testo2}</span>
+                                    </div>  
+                                    <CustomButton testo='VEDI OFFERTA' path='/supporto' />                 
                                 </div>
-                                <div className='icona-con-testo stella'>
-                                    <img 
-                                        src={stella}
-                                        alt='ico'
-                                    />
-                                    <span>{testo2}</span>
-                                </div>  
-                                <CustomButton testo='VEDI OFFERTA' path='/supporto' />                 
+                                <div 
+                                    className='immagine-annuncio' 
+                                    style={{
+                                        background: `linear-gradient(rgba(#2596be, 0.3), transparent), url(${backgroundImg})`
+                                    }} 
+                                />
                             </div>
-                            <div 
-                                className='immagine-annuncio' 
-                                style={{
-                                    background: `linear-gradient(rgba(#2596be, 0.3), transparent), url(${backgroundImg})`
-                                }} 
-                            />
                         </div>
                     ))
                 }                                      
                 </div>
             </section>
-            ))
-        }          
-        </div>
-    )
-}
+        ))
+    }          
+    </div>
+)
 
 export default LuceEGasPage
-
-
-
-/*
-Enel X foto da 1.9 a 6
-climatizzatore longbonus lg libero smart
-caldaia 1543
-luce e gas, imprese polize foto clima caldaie 
-*/

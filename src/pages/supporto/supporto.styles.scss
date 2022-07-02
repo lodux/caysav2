@@ -1,6 +1,8 @@
 .spcont {
     padding-top: 90px;
-  
+    @media only screen and (max-width: 1200px) {
+        padding-top: 0;
+    }  
 }
 
 .spbanner {
@@ -11,26 +13,41 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: 1200px) {
+        height: 180px;
+    }    
+
     .spbannerfrase {
         font-weight: 500;
         font-size: 49px;
         color: white;
-
+        
+        @media only screen and (max-width: 1200px) {
+            font-size: 35px;
+        }
     }
 }
 
+.scwrapper {
+    position: relative;
+    display: block!important;
+    width: 100%;
+    margin-left: 50px;
 
-.scContainer {
-    display: flex;
-    flex-direction: column;
-   
-    height: auto;
-    border: none;
-    background-color: white;
-    border-radius: 10px;
-    z-index: 1;
-    margin-left: 7%;
-    padding-top: 25px;
+    @media only screen and (max-width: 1200px) {
+        margin-left: 0;
+    }    
+
+    .scContainer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+        z-index: 1;
+        padding-top: 25px;
+    }
 }
 
 .sceglifrase{
@@ -57,16 +74,49 @@
     padding-right: 25px;
 }
 
-.scfa-whatsapp {
+.fa-whatsapp {
     align-items: center;
+    color:#00FF00;
+   font-size: 68px;
+   padding-left: 7%;
+   @media only screen and (max-width: 1000px) {
+    font-size: 50px;
+
+  }
+  @media only screen and (max-width: 600px) {
+    padding-left: 3px;
+
+  }
+}
+
+.fa-phone{
+    font-size: 60px;
+    padding-left: 7%;
+    display: flex;
+    align-items: center;
+    &.fc{
+        color: #4c8b0d;
+    }
+    @media only screen and (max-width: 1000px) {
+        font-size: 50px;
+        
+      }
+    @media only screen and (max-width: 600px) {
+        padding-left: 2%;
+        
+      }
 }
 
 .scpiii{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
+    width: 100%;
 
+    .scps {
+        width: 100%;
+    }
 }
 
 .scoption1 {
@@ -82,17 +132,26 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1200px) {
+        margin-left: 10px;
+    }    
 }
 
 .scoption2scelta {
-    width:80%;
+    width: 80%;
     height: 90px;
     border-left: solid 4px #4c8b0d;
-    margin-bottom: 30px;
     padding: 20px 15px 10px 20px;
     cursor: pointer;
     box-shadow: 0 5px 15px #0000001a;
     text-align: center;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
 /* raccoglie telefono e numero verde */
@@ -101,8 +160,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .scnverde {
@@ -118,7 +175,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    @media only screen and (max-width: 1200px) {
+        font-size: 20px;
+    }  
 
 }
 
@@ -135,7 +194,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+  
+    @media only screen and (max-width: 1000px) {
+        font-size: 16px;
+    }    
 
 }
 
@@ -152,6 +214,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1000px) {
+        margin-left: 10px;
+    }     
 }
 
 
@@ -159,7 +225,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    @media only screen and (max-width: 1200px) {
+        font-size: 20px;
+    }  
 }
 
 .scscelta {
@@ -192,7 +260,10 @@
     height: 70px;
     align-items: center;
 
-
+    @media only screen and (max-width: 1200px) {
+        display: flex;
+        justify-content: center;
+    }     
 }
 
 .scsc {
@@ -227,6 +298,10 @@
 
 .scscegliscritta {
     color: #2cbade;
+
+    @media only screen and (max-width: 420px) {
+        font-size: 20px;
+    }    
 }
 
 .scpi {
@@ -240,15 +315,29 @@
 
 
 
-.scfa-angle-right {
-    margin-left: 50px;
+.fa-angle-right {
+    margin-left: 30px;
     font-weight: bold;
-}
-
-.scavviachat {
-    width: 208px;
+    color:#00FF00;
+    font-size: 34px;
     display: flex;
-
+    align-items: center;
+    &.n{
+        color: #2cbade;
+    }
+    &.c{
+        color: #2cbade;
+    }
+    &.fc{
+        color: #4c8b0d;
+    }
+    @media only screen and (max-width: 500px) {
+        margin-left: 20px;
+    
+      }
+      @media only screen and (max-width: 420px) {
+       display: none;
+      }
 }
 
 .scavviachat:hover {
@@ -265,6 +354,11 @@
     margin-top: 15px;
     margin-bottom: 40px;
 
+    span {
+        margin: 10px;
+        text-align: center;
+    }
+
 }
 
 .scfattichiamare {
@@ -280,6 +374,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 1200px) {
+        font-size: 17px;
+    }  
 }
 
 //fa icon
@@ -330,8 +428,25 @@
 
 .scinputchiama {
     margin-bottom: 10px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+
+    button {
+        width: 200px;
+        margin: 20px;
+        margin-left: 0;
+        padding: 10px;
+        background-color: rgb(60, 207, 236);
+        border: 1px solid rgb(60, 207, 236);
+        color: #fff;
+        transition: all .2s linear;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(60, 207, 236);
+            background-color: #fff;
+        }
+    }
 }
 
 .scbottonefattichiamare {
@@ -385,11 +500,9 @@
 
     .scfasciao {
         width: 30%;
-        font-size: 16px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        
+        font-size: 12px;
+       
+        margin-top: 5%;
     }
 
     .scinpora {
@@ -483,6 +596,20 @@
     margin-bottom: 40px;
     margin-left: 7%;
     margin-top: 4%;
+
+    @media only screen and (max-width: 1200px) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button a {
+            font-size: 12px;
+        }
+    }     
+    
     .sediTit{
     margin-bottom: 1%;
     color: #2cbade;
@@ -492,28 +619,35 @@
     button{
     //font-family: "RoobertBold",Calibri,Myriad,Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 650;
-    font-style: normal;
     transition: all 100ms linear;
     display: inline-block;
     min-width: 160px;
     padding: 17px 40px 17px;
     text-align: center;
     text-transform: uppercase;
-    border-width: 2px;
-    border-style: solid;
+    border: 1px solid #fff;
     font-size: 16px;
     letter-spacing: .6px;
-    line-height: 1.33333;
-    border-color: #fff;
-    color: #fff;
-    transition: background-color 100ms linear;
-
+    line-height: 1.33333;    
+    background-color: #2cbade;
+     
+    a {
+        color: #fff;
     }
-    button:hover{
-        background-color: #2cbade;
+
+    &:hover {
+        background-color: #fff;
         cursor: pointer;
-        color: white;
+        color: #2cbade;   
+        border-color: #2cbade; 
+        
+        a {
+            color: #2cbade;
+        }
     }
 
-    
+    @media only screen and (max-width: 400px) {
+        width: 80%;
+       }
+    }
 }
