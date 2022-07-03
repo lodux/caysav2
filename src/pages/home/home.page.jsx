@@ -11,7 +11,7 @@ const galleriaDiImmagini = [
 ]
 
 const delay = 6000
-
+ 
 const HomePage = () => {
     const [index, setIndex] = useState(0)
     const timeoutRef = useRef(null)
@@ -42,7 +42,7 @@ const HomePage = () => {
             {
                 galleriaDiImmagini.map((img, i) => (
                     <div 
-                        key={i}
+                        key={ i }
                         className='slide'
                         style={{
                             'background': `url(${img}) no-repeat center center fixed`
