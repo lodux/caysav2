@@ -1,4 +1,6 @@
 import { Fragment, useState, useEffect } from 'react'
+import { useRef } from 'react';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import 'animate.css'
 
@@ -17,6 +19,25 @@ const ContattaciButton = () => {
   const [pag1, setPag1]=useState(false);
   const [pag2, setPag2]=useState(false);
   const [rend, setRen]=useState(false);
+
+  //send data backend
+  const nome = useRef();
+  const cognome = useRef();
+  const ntel=useRef();
+  const day=useRef();
+  const hour=useRef();
+
+  const Chiamami=async ()=>{
+    const call = {
+      nome: nome.current.value,
+      cognome: cognome.current.value,
+      ntel: ntel.current.value,
+      day: day.current.value,
+      hour: hour.current.value
+    };
+    await axios.post("http://localhost:8800/api/chiama/registra-chiamata", call);
+    setRen(true);
+  }
 
   //component button
   const Button = () => {    
@@ -88,15 +109,21 @@ const ContattaciButton = () => {
       min="10" 
       max="11"
       placeholder='Numero di telefono'
-      className='inp' /> 
+      className='inp' 
+      required
+      ref={ntel}/> 
       <input 
       type="text" 
       placeholder='Nome'
-      className='inp' /> 
+      className='inp' 
+      required
+      ref={nome}/> 
       <input 
       type="text" 
       placeholder='Cognome'
-      className='inp' /> 
+      className='inp'
+      required 
+      ref={cognome}/> 
 
     </div>
     <div className="fascia">
@@ -104,25 +131,29 @@ const ContattaciButton = () => {
     <input 
       type="date" 
       placeholder='Giorno'
-      className='inpgiorno' /> 
+      className='inpora' 
+      required
+      ref={day}/> 
       <input 
-      type="text" 
+      type="time" 
       placeholder='ora'
-      className='inpora' /> 
+      className='inpora' 
+      required
+      ref={hour}/> 
     </div>
 
     <div className="tastofatti">
         <span 
-        onClick={()=>setRen(true)}
+        onClick={()=>Chiamami()}
         className="bottonefattichiamare">
         CHIAMAMI GRATIS
         </span>
-        <i className='fa fa-angle-right' style={{color:"2E5C00",fontSize:"20px"}}></i> 
+        <i className='fa fa-angle-right l3'></i> 
     </div>
   
     <div className="fraseinf">
         <span className="normativa">
-        Ai sensi del Regolamento UE 679/2016  - “GDPR” autorizzo Enel Energia S.p.A. a contattarmi per ricevere informazioni sulle offerte commerciali e ricevere assistenza. Clicca qui per consultare l'informativa Privacy di Enel Energia S.p.A
+        Ai sensi del Regolamento UE 679/2016  - “GDPR” autorizzo Cayman Group s.r.l.s a contattarmi per ricevere informazioni sulle offerte commerciali e ricevere assistenza. Clicca qui per consultare l'informativa Privacy di Cayman Group s.r.l.s
         </span>
     </div>
     <div className="linea"></div>
@@ -173,30 +204,42 @@ const ContattaciButton = () => {
       </div>
     <h2 className='scegliscritta'>Scegli come contattarci</h2>
     {/* option chiamata */}
+    <a className='collegamento' href="tel:+800668209" style={{textDecoration:"none"}}>
     <div className='option1'>
-      <a className='collegamento' href="tel:+390123456789">
-      <div className="ps">
-        <i className="fa fa-phone" style={{fontSize:"34px"}} /> {/* immagine telefono */}
-        <span className="nverde">CHIAMACI</span>
-        <i className='fa fa-angle-right' style={{fontSize:"24px"}}></i>
-      </div> 
-      <div className="pi">
-          Chiama +39.0123.456789! 
+      <div className="p1">
+      <i className="fa fa-phone" style={{fontSize:"38px"}} /> {/* immagine telefono */}
       </div>
-      </a>  
+      <div className="p2">
+        <span className="nverde">CHIAMACI</span> 
+        Chiama +800.668.209! 
+      </div>
+      <div className="p3">
+         <i className='fa fa-angle-right l1'></i>
+      </div>
+       
     </div>
+    </a> 
     {/* option whatsapp */}
+
     <div className='option2scelta' onClick={()=>setFattichiamare(true)}>
-        <div className="ps">
-        <i className='fa fa-phone' style={{color:"#4c8b0d",fontSize:"34px"}}></i> {/* immagine telefono */}
-        <span className="fattichiamare">FATTICHIAMARE</span>
-        <i className='fa fa-angle-right' style={{color:"#4c8b0d",fontSize:"24px"}}></i>
+        <div className="p1">
+          <i className='fa fa-phone' style={{color:"#4c8b0d",fontSize:"38px"}}></i> {/* immagine telefono */}
+        </div>
+        <div className="p22">
+          <span className="fattichiamare">FATTICHIAMARE</span>
+          <span className='avviachat'>inserisci i tuoi dati e ti contatteremo</span>
+        </div>
+        <div className="p3">
+          <i className='fa fa-angle-right' style={{color:"#4c8b0d",fontSize:"30px"}}></i>
+        </div>
+      
+       
+       
       </div> 
-      <div className="pi">
-        <span className='avviachat'>inserisci i tuoi dati e ti contatteremo</span>
-      </div>    
+     
     </div>
-    </div>
+
+   
       ) : (
       <Fattichiamare/>
       
@@ -234,28 +277,37 @@ const ContattaciButton = () => {
             <div className="meno" onClick={()=>setClick(false)} ></div>
           </div>
               <h2 className='scegliscritta'>Scegli come contattarci</h2>
-            <div className='option1' onClick={()=>setChiama(true)}>
-              <div className="ps">
-                <i className="fa fa-phone" style={{fontSize:"34px"}} /> {/* immagine telefono */}
+         
+             <div className='option1' onClick={()=>setChiama(true)}>
+              <div className="p1">
+                <i className="fa fa-phone" style={{fontSize:"38px"}} /> {/* immagine telefono */}
+              </div> 
+              <div className="p2">
                 <span className="nverde">NUMERO</span>
-                <i className='fa fa-angle-right' style={{fontSize:"24px"}}></i>
-              </div> 
-              <div className="pi">
-                <span className='number'>chiamaci o fatti chiamare</span>
+                <span className="numero">chiamaci o fatti chiamare</span>            
               </div>  
+              <div className="p3">
+                <i className='fa fa-angle-right l1'></i>
+              </div>
             </div>
+            <a className='collegamento' href='https://api.whatsapp.com/send?phone=393456789715 ' style={{textDecoration:"none"}}>
+            
             <div className='option2'>
-            <a className='collegamento' href='https://api.whatsapp.com/send?phone=393456789715 '>
-                <div className="ps">
-                <i className='fa fa-whatsapp' style={{color:"#00FF00",fontSize:"34px"}}></i> {/* immagine telefono */}
-                <span className="chat">CHAT WATSAPP</span>
-                <i className='fa fa-angle-right' style={{color:"#00FF00",fontSize:"24px"}}></i>
-              </div> 
-              <div className="pi">
-                <span className='avviachat'>avvia una chat whatsapp con un consulente</span>
+            
+                <div className="p1">
+                <i className='fa fa-whatsapp' style={{color:"#00FF00",fontSize:"38px"}}></i> {/* immagine telefono */}
+                </div>
+                <div className="p22">             
+                  <span className="chat">WHATSAPP</span>
+                  <span className='avviachat'>avvia una chat whatsapp con un consulente</span>
+                </div>  
+              <div className="p3">
+                  <i className='fa fa-angle-right l2'></i>
               </div>    
-            </a>
-          </div>
+            
+          </div>  
+           </a>
+           
           </Fragment>
             ) }
           </Fragment>

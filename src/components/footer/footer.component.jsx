@@ -20,7 +20,7 @@ const Footer = () => {
   	 				<li className='spancol'>
 						Via Notarbartolo 20,90145 Palermo, Sicilia (ITALIA)
 						direzione@caymangroup.it
-						+393927498457
+						+800668209
 					</li>
   	 			</ul>
   	 		</div>
@@ -29,8 +29,8 @@ const Footer = () => {
   	 			<div className="social-links">
   	 				<a href="https://www.facebook.com/caymangroupsrls/"><i className="fab fa-facebook"></i></a>
   	 				<a href="https://www.tiktok.com/@caymangroupsrl?is_from_webapp=1&sender_device=pc"><i className="fab fa-tiktok"></i></a>
-  	 				<a href="#prova"><i className="fab fa-instagram"></i></a>
-  	 				<a href="#prova"><i className="fab fa-linkedin-in"></i></a>
+  	 				<a href="https://www.instagram.com/caymangroupsrl/"><i className="fab fa-instagram"></i></a>
+  	 				<a href="https://it.linkedin.com/company/caymangroupsrls"><i className="fab fa-linkedin-in"></i></a>
   	 			</div>
        		</div>
       	</div>

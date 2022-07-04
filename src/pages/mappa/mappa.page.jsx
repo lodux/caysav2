@@ -58,8 +58,10 @@ const Mappa = () => {
       <div className="infocontainer">
         <div className="infosinistra">
           <span className="via">{data.via}</span>
+          <a href={"tel:"+data.telefono} style={{textDecoration:"none",color:"black",marginTop:"6px"}}>
           <span className="telefono">telefono: {data.telefono}</span>
-        </div>
+          </a> 
+       </div>
         <div className="infodestra">
          
           

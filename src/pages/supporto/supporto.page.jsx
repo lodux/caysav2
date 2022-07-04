@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import axios from 'axios';
+import { useRef } from 'react';
 import CheckIcon from './ok.png';
 
 import './supporto.styles.scss';
@@ -10,6 +12,24 @@ const SupportoPage = () => {
   const [chiama, setChiama]=useState(false);
   const [pag2, setPag2]=useState(false);
   const [rend, setRen]=useState(false);
+
+  const nome = useRef();
+  const cognome = useRef();
+  const ntel=useRef();
+  const day=useRef();
+  const hour=useRef();
+
+  const Chiamami=async ()=>{
+    const call = {
+      nome: nome.current.value,
+      cognome: cognome.current.value,
+      ntel: ntel.current.value,
+      day: day.current.value,
+      hour: hour.current.value
+    };
+    await axios.post("http://localhost:8800/api/chiama/registra-chiamata", call);
+    setRen(true);
+  }
 
 const Fattichiamare = () => {
   return (
@@ -29,32 +49,40 @@ const Fattichiamare = () => {
       min="10" 
       max="11"
       placeholder='Numero di telefono'
-      className='scinp' /> 
+      className='scinp' 
+      ref={ntel}/> 
       <input
       required
       type="text" 
       placeholder='Nome'
-      className='scinp' /> 
+      className='scinp' 
+      ref={nome}/> 
       <input
       required 
       type="text" 
       placeholder='Cognome'
       className='scinp' 
-      style={{marginBottom:"12px"}}/>          
+      style={{marginBottom:"12px"}}
+      ref={cognome}/>          
       <span className="scfasciao">fascia oraria: </span>      
     <input 
       required
       type="date" 
       placeholder='Giorno'
-      className='scinp' /> 
+      className='scinp' 
+      ref={day}/> 
       <input 
       id='orario'
       required
       type="time" 
       placeholder='ora'
       className='scinp' 
+      ref={hour}
       /> 
-      <button type='submit'>FATTI CHIAMARE</button>
+      <button 
+      type='submit'
+      onClick={()=>Chiamami()}
+      >FATTI CHIAMARE</button>
     </form>
     <div className="sctastofatti">
     </div>
@@ -125,7 +153,7 @@ const Scelta = () => {
       </div>
   
     {/* option chiamata */}
-    <a href='https://youtube.com' style={{textDecoration:"none",color:"#000"}}>
+    <a href='tel:800668209' style={{textDecoration:"none",color:"#000"}}>
     <div className='scoption1'>
           <i className="fa fa-phone" /> {/* immagine telefono */}
       <div className="scpiii">
@@ -148,6 +176,12 @@ const Scelta = () => {
     
       <i className='fa fa-angle-right fc'></i>  
     </div>
+        </div>
+        <div className="scfooter">
+            <span className='scfoot'>
+              Disponibile dal lunedi al venerdi
+              dalle 9 alle 18
+            </span>
         </div>
       </div>
     ) : (
