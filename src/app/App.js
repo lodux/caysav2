@@ -25,6 +25,7 @@ const ServiziPage = lazy(() => import('../pages/servizi/servizi.page'))
 const HomePage = lazy(() => import('../pages/home/home.page'))
 const MappaPage = lazy(() => import('../pages/mappa/mappa.page'))
 const Footer = lazy(() => import('../components/footer/footer.component'))
+const Informativa=lazy(()=> import('../pages/informativa-privacy/informativa.page'))
 
 const App = () => {
   const { pathname } = useLocation()
@@ -49,6 +50,7 @@ const App = () => {
             <Route path='supporto' element = { <SupportoPage /> }/>
             <Route path='contattaci' element = { <ContattaciPage /> }/>
             <Route path='mappage/:via' element = { <MappaPage /> }/>
+            <Route path='informativa-privacy' element = { <Informativa /> }/>
             <Route path='*' element = { <PageNotFound /> }/> 
           </Routes>
         </Suspense>

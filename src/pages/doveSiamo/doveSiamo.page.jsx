@@ -6,7 +6,7 @@ const DovesiamoPage = () => (
    <div className="dovesiamocontainer">
    <div className='scrittasup'> 
       <h1 className='spansede'>VIENI A TROVARCI</h1>
-      <h2 className="sedi">LE NOSTRE SEDI: </h2>
+      <h2 className="sedi">SPAZI ENEL PARTNER: </h2>
    </div>
    <div className="cittaContainer"> 
       <div className='city'>

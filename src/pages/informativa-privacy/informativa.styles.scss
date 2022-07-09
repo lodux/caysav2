@@ -1,0 +1,100 @@
+.infCont{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    .ta{
+        height: 400px;
+        font-family: 'sans serif';
+        letter-spacing: 1px;
+        width: 60%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        @media only screen and (max-width: 700px) {
+            width: 80%;
+        }
+    }
+    .infScritte{
+        margin-bottom: 10px;
+    }
+    .infinp{
+        transition: all 1s linear;
+        font-family: RoobertLight, Calibri, Myriad, Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 1;
+        background: 0;
+        border: 2px solid rgba(0, 0, 0, .15);
+        color: #000;
+        display: inline-block;
+        margin-top: 12px;
+        min-width: 160px;
+        outline: 0;
+        padding: 9px 9px 7px;
+
+        -moz-appearance: textfield;
+        -webkit-appearance: none;
+        border-radius: 0;
+        box-shadow: none;
+        width: 60%;
+        margin-bottom: 10px;
+        @media only screen and (max-width: 700px) {
+            width: 90%;
+        }
+    }
+
+
+}    
+.sigCont{
+        width: 900px;
+        height: 300px;
+        background: #fff;
+        height: 100%;
+        margin-top: 10px;
+        border: solid 1px black;
+        @media only screen and (min-width: 320px) {
+            width: 300px;
+            height: 150px;
+        }
+        @media only screen and (min-width: 400px) {
+            width: 400px;
+            height: 150px;
+        }
+   
+        @media only screen and (min-width: 600px) {
+            width: 350px;
+        }      
+        @media only screen and (min-width: 1000px) {
+            width: 550px;
+        }
+
+    }
+canvas{
+        width: 900px;
+        @media only screen and (min-width: 320px) {
+            width: 300px;
+            height: 150px;
+        }
+        @media only screen and (min-width: 400px) {
+            width: 400px;
+            height: 150px;
+        }
+        @media only screen and (min-width: 600px) {
+            width: 350px;
+        }
+        @media only screen and (min-width: 1000px) {
+            width: 550px;
+        }
+
+    }
+
+.send{
+
+}
+.inv{
+    background-color: white;
+    border-color: #fff;
+
+}
