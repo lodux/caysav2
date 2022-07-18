@@ -101,7 +101,7 @@ const ContattaciButton = () => {
           <span className="frase">
             Inserisci i tuoi dati e un nostro operatore ti richiamerà prima possibile
             </span>
-            <div className="meno" onClick={()=>setClick(false)} ></div>
+            <div className="meno m1" onClick={()=>setClick(false)} ></div>
     </div>
     <div className="inputchiama">
       <input 
@@ -225,7 +225,7 @@ const ContattaciButton = () => {
         <div className="p1">
           <i className='fa fa-phone' style={{color:"#4c8b0d",fontSize:"38px"}}></i> {/* immagine telefono */}
         </div>
-        <div className="p22">
+        <div className="p2">
           <span className="fattichiamare">FATTICHIAMARE</span>
           <span className='avviachat'>inserisci i tuoi dati e ti contatteremo</span>
         </div>

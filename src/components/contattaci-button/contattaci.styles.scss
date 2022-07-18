@@ -64,7 +64,7 @@
  .p3{
     display: flex;
     align-items: center;
-
+    justify-content: flex-start;
  }
 
  .option2scelta {
@@ -172,6 +172,7 @@
      display: flex;
      border-bottom: rgb(170, 169, 169) 1px solid;
      height: 70px;
+     align-items: center;
  
      
  }
@@ -199,7 +200,7 @@
      color: #2cbade;
      display: flex;
      margin-left: 8px;
-     margin-top: 15px;
+    
      align-items: center;
      justify-content: center;
      height: 40px;
@@ -218,10 +219,13 @@
      width: 25px;
      height: 4px;
      margin-left: 40px;
-     margin-top: 20px;
      margin-right: 10px;
      background-color: #2cbade;
-    cursor: pointer;
+     cursor: pointer;
+     &.m1{
+        width: 45px;
+        margin-top: 0px;
+     }
  }
  
  .scegliscritta {
@@ -244,6 +248,7 @@
  .avviachat {
 
   display: flex;
+  justify-content: flex-start;
  
  }
  
