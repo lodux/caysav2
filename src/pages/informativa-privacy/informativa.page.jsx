@@ -14,10 +14,17 @@ export default function Informativa() {
         sigPad.current.clear();
     }
 
-    useEffect(()=>{
-        setFirma(sigPad.current.toDataURL());
+    const saveFirma=()=>{
+        if(sigPad.current.toDataURL()=="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAq8AAAC7CAYAAABLuXc5AAAAAXNSR0IArs4c6QAACnZJREFUeF7t1kENAAAMArHh3/R0XNIpIB0Pdo4AAQIECBAgQIBARGCRnGISIECAAAECBAgQOONVCQgQIECAAAECBDICxmvmVYISIECAAAECBAgYrzpAgAABAgQIECCQETBeM68SlAABAgQIECBAwHjVAQIECBAgQIAAgYyA8Zp5laAECBAgQIAAAQLGqw4QIECAAAECBAhkBIzXzKsEJUCAAAECBAgQMF51gAABAgQIECBAICNgvGZeJSgBAgQIECBAgIDxqgMECBAgQIAAAQIZAeM18ypBCRAgQIAAAQIEjFcdIECAAAECBAgQyAgYr5lXCUqAAAECBAgQIGC86gABAgQIECBAgEBGwHjNvEpQAgQIECBAgAAB41UHCBAgQIAAAQIEMgLGa+ZVghIgQIAAAQIECBivOkCAAAECBAgQIJARMF4zrxKUAAECBAgQIEDAeNUBAgQIECBAgACBjIDxmnmVoAQIECBAgAABAsarDhAgQIAAAQIECGQEjNfMqwQlQIAAAQIECBAwXnWAAAECBAgQIEAgI2C8Zl4lKAECBAgQIECAgPGqAwQIECBAgAABAhkB4zXzKkEJECBAgAABAgSMVx0gQIAAAQIECBDICBivmVcJSoAAAQIECBAgYLzqAAECBAgQIECAQEbAeM28SlACBAgQIECAAAHjVQcIECBAgAABAgQyAsZr5lWCEiBAgAABAgQIGK86QIAAAQIECBAgkBEwXjOvEpQAAQIECBAgQMB41QECBAgQIECAAIGMgPGaeZWgBAgQIECAAAECxqsOECBAgAABAgQIZASM18yrBCVAgAABAgQIEDBedYAAAQIECBAgQCAjYLxmXiUoAQIECBAgQICA8aoDBAgQIECAAAECGQHjNfMqQQkQIECAAAECBIxXHSBAgAABAgQIEMgIGK+ZVwlKgAABAgQIECBgvOoAAQIECBAgQIBARsB4zbxKUAIECBAgQIAAAeNVBwgQIECAAAECBDICxmvmVYISIECAAAECBAgYrzpAgAABAgQIECCQETBeM68SlAABAgQIECBAwHjVAQIECBAgQIAAgYyA8Zp5laAECBAgQIAAAQLGqw4QIECAAAECBAhkBIzXzKsEJUCAAAECBAgQMF51gAABAgQIECBAICNgvGZeJSgBAgQIECBAgIDxqgMECBAgQIAAAQIZAeM18ypBCRAgQIAAAQIEjFcdIECAAAECBAgQyAgYr5lXCUqAAAECBAgQIGC86gABAgQIECBAgEBGwHjNvEpQAgQIECBAgAAB41UHCBAgQIAAAQIEMgLGa+ZVghIgQIAAAQIECBivOkCAAAECBAgQIJARMF4zrxKUAAECBAgQIEDAeNUBAgQIECBAgACBjIDxmnmVoAQIECBAgAABAsarDhAgQIAAAQIECGQEjNfMqwQlQIAAAQIECBAwXnWAAAECBAgQIEAgI2C8Zl4lKAECBAgQIECAgPGqAwQIECBAgAABAhkB4zXzKkEJECBAgAABAgSMVx0gQIAAAQIECBDICBivmVcJSoAAAQIECBAgYLzqAAECBAgQIECAQEbAeM28SlACBAgQIECAAAHjVQcIECBAgAABAgQyAsZr5lWCEiBAgAABAgQIGK86QIAAAQIECBAgkBEwXjOvEpQAAQIECBAgQMB41QECBAgQIECAAIGMgPGaeZWgBAgQIECAAAECxqsOECBAgAABAgQIZASM18yrBCVAgAABAgQIEDBedYAAAQIECBAgQCAjYLxmXiUoAQIECBAgQICA8aoDBAgQIECAAAECGQHjNfMqQQkQIECAAAECBIxXHSBAgAABAgQIEMgIGK+ZVwlKgAABAgQIECBgvOoAAQIECBAgQIBARsB4zbxKUAIECBAgQIAAAeNVBwgQIECAAAECBDICxmvmVYISIECAAAECBAgYrzpAgAABAgQIECCQETBeM68SlAABAgQIECBAwHjVAQIECBAgQIAAgYyA8Zp5laAECBAgQIAAAQLGqw4QIECAAAECBAhkBIzXzKsEJUCAAAECBAgQMF51gAABAgQIECBAICNgvGZeJSgBAgQIECBAgIDxqgMECBAgQIAAAQIZAeM18ypBCRAgQIAAAQIEjFcdIECAAAECBAgQyAgYr5lXCUqAAAECBAgQIGC86gABAgQIECBAgEBGwHjNvEpQAgQIECBAgAAB41UHCBAgQIAAAQIEMgLGa+ZVghIgQIAAAQIECBivOkCAAAECBAgQIJARMF4zrxKUAAECBAgQIEDAeNUBAgQIECBAgACBjIDxmnmVoAQIECBAgAABAsarDhAgQIAAAQIECGQEjNfMqwQlQIAAAQIECBAwXnWAAAECBAgQIEAgI2C8Zl4lKAECBAgQIECAgPGqAwQIECBAgAABAhkB4zXzKkEJECBAgAABAgSMVx0gQIAAAQIECBDICBivmVcJSoAAAQIECBAgYLzqAAECBAgQIECAQEbAeM28SlACBAgQIECAAAHjVQcIECBAgAABAgQyAsZr5lWCEiBAgAABAgQIGK86QIAAAQIECBAgkBEwXjOvEpQAAQIECBAgQMB41QECBAgQIECAAIGMgPGaeZWgBAgQIECAAAECxqsOECBAgAABAgQIZASM18yrBCVAgAABAgQIEDBedYAAAQIECBAgQCAjYLxmXiUoAQIECBAgQICA8aoDBAgQIECAAAECGQHjNfMqQQkQIECAAAECBIxXHSBAgAABAgQIEMgIGK+ZVwlKgAABAgQIECBgvOoAAQIECBAgQIBARsB4zbxKUAIECBAgQIAAAeNVBwgQIECAAAECBDICxmvmVYISIECAAAECBAgYrzpAgAABAgQIECCQETBeM68SlAABAgQIECBAwHjVAQIECBAgQIAAgYyA8Zp5laAECBAgQIAAAQLGqw4QIECAAAECBAhkBIzXzKsEJUCAAAECBAgQMF51gAABAgQIECBAICNgvGZeJSgBAgQIECBAgIDxqgMECBAgQIAAAQIZAeM18ypBCRAgQIAAAQIEjFcdIECAAAECBAgQyAgYr5lXCUqAAAECBAgQIGC86gABAgQIECBAgEBGwHjNvEpQAgQIECBAgAAB41UHCBAgQIAAAQIEMgLGa+ZVghIgQIAAAQIECBivOkCAAAECBAgQIJARMF4zrxKUAAECBAgQIEDAeNUBAgQIECBAgACBjIDxmnmVoAQIECBAgAABAsarDhAgQIAAAQIECGQEjNfMqwQlQIAAAQIECBAwXnWAAAECBAgQIEAgI2C8Zl4lKAECBAgQIECAgPGqAwQIECBAgAABAhkB4zXzKkEJECBAgAABAgSMVx0gQIAAAQIECBDICBivmVcJSoAAAQIECBAgYLzqAAECBAgQIECAQEbAeM28SlACBAgQIECAAAHjVQcIECBAgAABAgQyAsZr5lWCEiBAgAABAgQIGK86QIAAAQIECBAgkBEwXjOvEpQAAQIECBAgQMB41QECBAgQIECAAIGMgPGaeZWgBAgQIECAAAECxqsOECBAgAABAgQIZASM18yrBCVAgAABAgQIEDBedYAAAQIECBAgQCAj8Fk4ALwhFZPeAAAAAElFTkSuQmCC"){
+            alert("firma!!");
+            setC(false)
+        } else{
+            setFirma(sigPad.current.toDataURL());
+
+        }
+       
         console.log(firma);
-    },[c])
+    }
     
 
   return (
@@ -327,7 +334,7 @@ export default function Informativa() {
         <div className='radio'>
             <span className="infScritte">Infomrativa sulla privacy sopra riportata*</span><br/>
             <input type="radio" id="html" name="Infomrativa sulla privacy sopra riportata*" value="Luce di Enel Energia"/>
-            <label for="html">Luce di Enel EnergiaL</label><br/>
+            <label for="html">Luce di Enel Energia</label><br/>
             <input type="radio" id="css" name="Infomrativa sulla privacy sopra riportata*" value="Gas di Enel Energia"/>
             <label for="css">Gas di Enel Energia</label><br/>
             <input type="radio" id="javascript" name="Infomrativa sulla privacy sopra riportata*" value="Fibra di Melita"/>
@@ -337,7 +344,7 @@ export default function Informativa() {
         </div>
         <div>
             <span className="infScritte">Informativa sulla Privacy sopra riportata per i seguenti prodotti(1)*</span><br/>
-            <input type="radio" id="html" name="Informativa sulla Privacy sopra riportata per i seguenti prodotti(1)*" value="Acconsento al trattamento dei dati personali"/>
+            <input type="radio" id="html" name="Informativa sulla Privacy sopra riportata per i seguenti prodotti(1)*" value="Acconsento al trattamento dei dati personali" required/>
             <label for="html">Acconsento al trattamento dei dati personali</label><br/>
         </div>
   
@@ -348,8 +355,8 @@ export default function Informativa() {
         </div>
         <input type='text' style={{display:"none"}} name="firma" value={firma} />
         <button type='button' onClick={()=>clear()}>Clear</button> 
-        <button type='button' onClick={()=>setC(true)}>Save</button> <br/>
-        <button type='submit' className={c ? 'send' : 'inv'}>Invia</button>
+        <button type='button' onClick={()=>saveFirma()}>Save</button> <br/>
+        <button type='submit' className={firma ? 'send' : 'inv'}>Invia</button>
 
     </form>
 

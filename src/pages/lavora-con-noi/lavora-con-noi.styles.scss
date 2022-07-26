@@ -23,37 +23,17 @@
         justify-content: space-around;
         padding: 60px;
 
-        .intro {
-            display: inline-block;
-            font-size: 25px;
-            color: #fff;
-            max-width: 70%; 
-        }      
-       
-        .cv {
-            color: #fff;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            background-color: #046A8C;
-            height: 150px;
-            width: 200px;
-            border-radius: 20px; 
-            
-            &:hover {
-                cursor: pointer;
-            }                    
+        .jobCont{
+            background-color: #2FA7CF;
 
-            img {
-                width: 30px;
-                height: auto;
-            }                    
-        }   
+      
+            .jobImg{
+                width: 400px;
+            }
+        }
     }
 
-    @media only screen and (max-width: 730px) {
+    @media only screen and (max-width: 1300px) {
 
         .background-img {
 
@@ -65,12 +45,63 @@
         .cv-container {
             flex-direction: column;
             padding: 30px;
-
-            .intro {
-                max-width: 100%;
-                margin-bottom: 30px;
-                font-size: 23px;
+            .jobCont{
+                margin-top: 60px;
+                
+                .jobImg{
+                    width: 600px;
+                }
             }
+
+      
         }
     }
+
+    @media only screen and (max-width: 800px) {
+
+        .background-img {
+
+            span {
+                font-size: 35px;
+            }
+        }
+
+        .cv-container {
+            flex-direction: column;
+            padding: 30px;
+            .jobCont{
+                margin-top: 60px;
+               
+                .jobImg{
+                    width: 420px;
+                }
+            }
+      
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+
+        .background-img {
+
+            span {
+                font-size: 35px;
+            }
+        }
+
+        .cv-container {
+            flex-direction: column;
+            padding: 30px;
+            .jobCont{
+                margin-top: 60px;
+               
+                .jobImg{
+                    width: 300px;
+                }
+            }
+      
+        }
+    }
+
+
 }

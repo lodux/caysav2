@@ -26,11 +26,14 @@ const HomePage = lazy(() => import('../pages/home/home.page'))
 const MappaPage = lazy(() => import('../pages/mappa/mappa.page'))
 const Footer = lazy(() => import('../components/footer/footer.component'))
 const Informativa=lazy(()=> import('../pages/informativa-privacy/informativa.page'))
+const Lavoro=lazy(()=>import('../pages/Lavoro/lavoro.pages'));
+
 
 const App = () => {
   const { pathname } = useLocation()
 
   return (
+    
     <div className='App'> 
       <ErrorBoundary>
         <NavBar linkAttuale = { pathname }/>
@@ -51,6 +54,7 @@ const App = () => {
             <Route path='contattaci' element = { <ContattaciPage /> }/>
             <Route path='mappage/:via' element = { <MappaPage /> }/>
             <Route path='informativa-privacy' element = { <Informativa /> }/>
+            <Route path='lavoro/:job' element = { <Lavoro/> }/>
             <Route path='*' element = { <PageNotFound /> }/> 
           </Routes>
         </Suspense>

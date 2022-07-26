@@ -20,6 +20,8 @@ const Footer = () => {
   	 				<li className='spancol'>
 						Via Notarbartolo 20,90145 Palermo, Sicilia (ITALIA)
 						direzione@caymangroup.it
+					</li>
+					<li className='spancol'>
 						+800668209
 					</li>
   	 			</ul>

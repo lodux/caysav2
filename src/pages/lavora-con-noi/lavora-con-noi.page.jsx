@@ -1,6 +1,10 @@
 import './lavora-con-noi.styles.scss'
 
-import ico from './plus.png'
+import ico from './plus.png';
+import j1 from './2.svg';
+import j2 from './3.svg';
+import j3 from './4.svg';
+import { Link } from 'react-router-dom';
 
 const LavoraConNoi = () => {
 
@@ -10,17 +14,22 @@ const LavoraConNoi = () => {
                 <span>LAVORA CON NOI</span>
             </div>  
             <div className='cv-container'>
-                <span className='intro'>
-                    La Cayman Group offre posizioni lavorative di diverso tipo.
-                    Carica il tuo CV corredato di recapito telefonico e indirizzo mail.
-                    Sarà nostra cura fissarti un colloquio conoscitivo il prima possibile
-                </span>
-                <span className='cv'
-                    onClick={() => window.open('mailto:saveriorandazzo51@gmail.com?subject=CV')}
-                >
-                    <img src={ico} alt='add' />
-                    INVIA IL TUO CV
-                </span>
+                <Link to='/lavoro/postino'>
+                <div className="jobCont">
+                    <img src={j1} alt="" className="jobImg" />
+                </div> 
+                </Link>
+                <Link to="/lavoro/pkso">
+                <div className="jobCont">
+                     <img src={j2} alt="" className="jobImg" />
+                </div>                    
+                </Link>
+                <Link to="/lavoro/mdo">
+                <div className="jobCont">
+                     <img src={j3} alt="" className="jobImg" />
+                </div>   
+                </Link>
+               
             </div>
         </div>
     )
