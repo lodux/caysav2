@@ -1,38 +1,12 @@
 import './chiSiamo.styles.scss'
 
 const frasi = [
-  `Cayman Group è partner di Enel Energia, 
-  con sede a Marsala in via Francesco Crispi 19 - Uffici a Palermo in Via Notarbartolo 20 `,
-  `I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione contatti del sito. Per info visitate le nostre pagine social`
+  `Siamo un’utility giovanile, flessibile, innovativa e impegnata a garantire ai nostri collaboratori un modello di sviluppo sostenibile che non lascia indietro nessuno.
+  Siamo uno dei principali partner commerciali italia di Enel Global.
+  Le nostre offerte spaziano da soluzioni per consumi domestici e commerciali, tecnologie intelligenti per permettere ai nostri clienti di vivere la trasformazione energetica in modo più semplice, servizi di e-mobility e servizi smart per la connessione internet.`
 ]
 
-const personale = [
-  {
-    nome: 'Nome',
-    img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-    citazione: 'I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione contatti del sito. Per info visitate le nostre pagine social'
-  },
-  {
-    nome: 'Nome',
-    img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-    citazione: 'Breve descrizione'
-  },
-  {
-    nome: 'Nome',
-    img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-    citazione: 'I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione contatti del sito. Per info visitate le nostre pagine social'
-  },
-  {
-    nome: 'Nome',
-    img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-    citazione: 'Breve descrizione'
-  },
-  {
-    nome: 'Nome',
-    img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-    citazione: 'I Negozi SEP "Spazio Enel Partner" sono elencati nella sezione contatti del sito. Per info visitate le nostre pagine social'
-  }
-]
+
 
 const ChisiamoPage = () => (
   <div className='chi-siamo-page'>
@@ -56,27 +30,6 @@ const ChisiamoPage = () => (
       } 
       <span className='virgolette end'>❞</span>
     </div>
-    <span className='titolo'>
-      IL NOSTRO STAFF
-    </span>  
-    {
-      personale.map(({ nome, citazione, img }, i) => (
-        <div 
-          className='tizio-container' 
-          key={i}
-        >
-          <div className='foto'>
-            <img src={img} alt='foto' />
-            <span>{nome}</span>
-          </div>
-          <div className='presentazione'>
-            <span className='virgolette'>❝</span>
-            <span className='testo'>{citazione}</span>
-            <span className='virgolette end'>❞</span>
-          </div>
-        </div>
-      ))
-    }    
   </div>
 )  
 

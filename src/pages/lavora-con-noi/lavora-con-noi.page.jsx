@@ -14,17 +14,17 @@ const LavoraConNoi = () => {
                 <span>LAVORA CON NOI</span>
             </div>  
             <div className='cv-container'>
-                <Link to='/lavoro/postino'>
+                <Link to='/lavoro/operatore-corner'>
                 <div className="jobCont">
                     <img src={j1} alt="" className="jobImg" />
                 </div> 
                 </Link>
-                <Link to="/lavoro/pkso">
+                <Link to="/lavoro/operatore-call-center">
                 <div className="jobCont">
                      <img src={j2} alt="" className="jobImg" />
                 </div>                    
                 </Link>
-                <Link to="/lavoro/mdo">
+                <Link to="/lavoro/affiliazione">
                 <div className="jobCont">
                      <img src={j3} alt="" className="jobImg" />
                 </div>   

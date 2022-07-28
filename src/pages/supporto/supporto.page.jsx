@@ -27,7 +27,7 @@ const SupportoPage = () => {
       day: day.current.value,
       hour: hour.current.value
     };
-    await axios.post("http://localhost:8800/api/chiama/registra-chiamata", call);
+    await axios.post("https://cayman-server-r.herokuapp.com/api/chiama/registra-chiamata", call);
     setRen(true);
   }
 
@@ -198,12 +198,14 @@ const Scelta = () => {
       <div className="sediCont">
         <h1 className="sediTit">
           Le Nostre Sedi
-        </h1>
+        </h1>  
+        <Link to='/dovesiamo' style={{textDecoration:"none"}}>
         <button className="frasiTit">
-          <Link to='/dovesiamo' style={{textDecoration:"none"}}>
+        
               trova la sede cayman più vicina a te
-          </Link>
-        </button>
+       
+        </button>   
+        </Link>
       </div>
     )
   }

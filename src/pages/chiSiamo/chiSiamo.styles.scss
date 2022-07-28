@@ -3,6 +3,7 @@
     background-size: 400% 400%;
     animation: gradient 3s ease infinite;
     padding-top: 100px;
+    padding-bottom: 100px;
 
     @keyframes gradient {
         0% {
@@ -39,6 +40,7 @@
         border-radius: 25px;
         margin: 0 auto;
         padding: 30px;
+      
 
         .virgolette {
             font-size: 60px;

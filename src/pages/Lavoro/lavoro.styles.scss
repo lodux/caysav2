@@ -1,0 +1,81 @@
+.bannerImg{
+    margin-top: 90px;
+   
+}
+
+.descCont{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     padding-bottom: 20px;
+    padding-top: 20px;
+    .descrizione{
+        width: 85%;
+        padding: 20px;
+        border: 1px solid #e3e3e3;
+        border-radius: 8px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        .inputLav{
+            display: flex;
+            flex-direction: column;
+            .imgPlus{
+                background-color: #2cbade;;
+            }
+            .dom{
+                padding-top: 40px;
+            }
+        }
+       
+    }
+}
+
+.cv{
+    display: flex;
+    align-items: flex-end ;
+    
+}
+.car{
+    margin-right: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.car:hover{
+    text-decoration: underline;
+    color: #2cbade;
+}
+
+.details{
+    padding-top: 15px;
+    .strong{
+    font-weight: 620;
+    }
+}
+
+.AffCont{
+    padding-top: 40px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    .affTit{
+        margin-bottom: 20px;
+    }
+    .sezCont{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        input{
+            padding: 5px 5px;
+        }
+        textarea {
+            height: 80px;
+        }
+    }
+    .affDom{
+        font-weight: 500;
+        
+    }
+}

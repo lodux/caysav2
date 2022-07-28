@@ -35,7 +35,7 @@ const ContattaciButton = () => {
       day: day.current.value,
       hour: hour.current.value
     };
-    await axios.post("http://localhost:8800/api/chiama/registra-chiamata", call);
+    await axios.post("https://cayman-server-r.herokuapp.com/api/chiama/registra-chiamata", call);
     setRen(true);
   }
 
